@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/the-movie-database/main/json-schema/the-movie-database-movie-schema.json",
+  "title": "TMDB Movie",
+  "description": "A movie object from The Movie Database API v3.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique TMDB identifier for the movie."
+    },
+    "title": {
+      "type": "string",
+      "description": "The movie's primary title."
+    },
+    "original_title": {
+      "type": "string",
+      "description": "The movie's title in its original language."
+    },
+    "original_language": {
+      "type": "string",
+      "description": "ISO 639-1 code for the original language."
+    },
+    "overview": {
+      "type": "string",
+      "description": "Plot summary of the movie."
+    },
+    "tagline": {
+      "type": "string",
+      "description": "Movie tagline."
+    },
+    "release_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Theatrical release date in YYYY-MM-DD format."
+    },
+    "runtime": {
+      "type": "integer",
+      "description": "Runtime in minutes."
+    },
+    "status": {
+      "type": "string",
+      "description": "Release status.",
+      "enum": ["Rumored", "Planned", "In Production", "Post Production", "Released", "Canceled"]
+    },
+    "adult": {
+      "type": "boolean",
+      "description": "Whether the movie is for adult audiences."
+    },
+    "budget": {
+      "type": "integer",
+      "description": "Production budget in USD."
+    },
+    "revenue": {
+      "type": "integer",
+      "description": "Box office revenue in USD."
+    },
+    "popularity": {
+      "type": "number",
+      "description": "TMDB popularity score."
+    },
+    "vote_average": {
+      "type": "number",
+      "description": "Average user rating (0-10)."
+    },
+    "vote_count": {
+      "type": "integer",
+      "description": "Total number of user votes."
+    },
+    "poster_path": {
+      "type": "string",
+      "nullable": true,
+      "description": "Relative path to the poster image. Prepend the TMDB image base URL."
+    },
+    "backdrop_path": {
+      "type": "string",
+      "nullable": true,
+      "description": "Relative path to the backdrop image."
+    },
+    "homepage": {
+      "type": "string",
+      "format": "uri",
+      "description": "Official website URL."
+    },
+    "imdb_id": {
+      "type": "string",
+      "description": "IMDb identifier (e.g., tt1234567)."
+    },
+    "genres": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Genre"
+      }
+    },
+    "production_companies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ProductionCompany"
+      }
+    },
+    "production_countries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "iso_3166_1": { "type": "string" },
+          "name": { "type": "string" }
+        }
+      }
+    },
+    "spoken_languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "iso_639_1": { "type": "string" },
+          "name": { "type": "string" },
+          "english_name": { "type": "string" }
+        }
+      }
+    },
+    "belongs_to_collection": {
+      "type": "object",
+      "nullable": true,
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" },
+        "poster_path": { "type": "string" },
+        "backdrop_path": { "type": "string" }
+      }
+    }
+  },
+  "required": ["id", "title"],
+  "$defs": {
+    "Genre": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" }
+      },
+      "required": ["id", "name"]
+    },
+    "ProductionCompany": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" },
+        "logo_path": { "type": "string", "nullable": true },
+        "origin_country": { "type": "string" }
+      }
+    }
+  }
+}

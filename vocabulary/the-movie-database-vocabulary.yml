@@ -1,0 +1,125 @@
+vocabulary:
+  title: The Movie Database Vocabulary
+  description: >-
+    Domain vocabulary for The Movie Database (TMDB) API covering movies, TV series,
+    people, ratings, and entertainment data concepts.
+  version: '1.0'
+  created: '2026-05-03'
+  modified: '2026-05-03'
+  terms:
+    - term: Movie
+      label: Movie
+      definition: >-
+        A theatrical or direct-release film identified by a unique TMDB integer ID.
+        Movie records include title, release date, runtime, genres, cast, crew, budget,
+        revenue, ratings, and associated images.
+      domain: Movies
+
+    - term: TVSeries
+      label: TV Series
+      definition: >-
+        A television series identified by a unique TMDB integer ID. Series records include
+        name, first air date, number of seasons and episodes, genre, networks, cast, crew,
+        and ratings.
+      domain: Television
+
+    - term: Season
+      label: TV Season
+      definition: >-
+        An ordered grouping of TV episodes within a series, identified by a season number.
+        Season 0 is typically used for specials.
+      domain: Television
+
+    - term: Episode
+      label: TV Episode
+      definition: >-
+        A single installment of a TV series, identified by a season number and episode number.
+        Has its own title, air date, overview, and crew (director, writer).
+      domain: Television
+
+    - term: Person
+      label: Person
+      definition: >-
+        An actor, director, writer, or other entertainment industry professional, identified by
+        a unique TMDB person ID. Profiles include biography, birthday, place of birth,
+        filmography, and profile images.
+      domain: People
+
+    - term: Genre
+      label: Genre
+      definition: >-
+        A content category assigned to movies and TV series (e.g., Action, Drama, Comedy,
+        Science Fiction). TMDB maintains separate genre lists for movies and TV.
+      domain: Classification
+
+    - term: VoteAverage
+      label: Vote Average
+      definition: >-
+        The arithmetic mean of all user ratings for a movie or TV series on a scale of 0 to 10.
+        Calculated from the vote_count submissions.
+      domain: Ratings
+
+    - term: Popularity
+      label: TMDB Popularity Score
+      definition: >-
+        A proprietary TMDB score combining page views, user interactions, and release recency.
+        Higher scores indicate more current engagement. Not directly comparable across time periods.
+      domain: Discovery
+
+    - term: Trending
+      label: Trending
+      definition: >-
+        Content experiencing elevated engagement within a defined time window (day or week).
+        TMDB provides trending lists for movies, TV series, and people.
+      domain: Discovery
+
+    - term: AppendToResponse
+      label: Append to Response
+      definition: >-
+        A query parameter that allows multiple sub-requests to be bundled into a single
+        API call. For example, append_to_response=credits,videos,keywords fetches the
+        movie details, cast, videos, and keywords in one request.
+      domain: API
+
+    - term: ExternalID
+      label: External ID
+      definition: >-
+        An identifier from another database system linked to a TMDB record. Common external
+        IDs include imdb_id (e.g., tt1234567), tvdb_id, and wikidata_id.
+      domain: API
+
+    - term: WatchProvider
+      label: Watch Provider
+      definition: >-
+        A streaming service, rental platform, or purchase outlet where a movie or TV series
+        is available. TMDB provides watch provider data from JustWatch, filtered by region.
+      domain: Streaming
+
+    - term: Collection
+      label: Movie Collection
+      definition: >-
+        A named group of related films (e.g., The Dark Knight Collection, The Avengers Collection).
+        Movies may belong to a collection, identified by a collection ID.
+      domain: Movies
+
+    - term: Discover
+      label: Discover
+      definition: >-
+        TMDB's filter-based endpoint for finding movies and TV series without a title query.
+        Supports filtering by genre, rating range, release year, sort order, region, and more.
+      domain: Discovery
+
+    - term: Credits
+      label: Credits
+      definition: >-
+        The cast and crew associated with a movie, TV series, or episode. Cast entries
+        include character name; crew entries include job title and department.
+      domain: People
+
+    - term: ImagePath
+      label: Image Path
+      definition: >-
+        A relative path to an image asset (poster, backdrop, profile, logo). To form the full
+        URL, prepend the image base URL and desired size from the configuration API
+        (e.g., https://image.tmdb.org/t/p/w500/path.jpg).
+      domain: Images

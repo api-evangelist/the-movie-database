@@ -1,0 +1,87 @@
+extends: spectral:oas
+rules:
+  tmdb-operations-must-have-operationid:
+    description: All TMDB API operations must define an operationId for client SDK generation.
+    severity: error
+    given: "$.paths[*][*]"
+    then:
+      field: operationId
+      function: truthy
+
+  tmdb-operations-must-have-summary:
+    description: All operations must have a summary.
+    severity: warn
+    given: "$.paths[*][*]"
+    then:
+      field: summary
+      function: truthy
+
+  tmdb-responses-must-include-200:
+    description: All read operations must define a 200 success response.
+    severity: error
+    given: "$.paths[*][get].responses"
+    then:
+      field: "200"
+      function: truthy
+
+  tmdb-responses-must-include-401:
+    description: All write operations must document 401 Unauthorized.
+    severity: warn
+    given: "$.paths[*][post].responses"
+    then:
+      field: "401"
+      function: truthy
+
+  tmdb-language-param-must-have-description:
+    description: The language parameter must have a description indicating ISO 639-1 format.
+    severity: warn
+    given: "$.paths[*][*].parameters[?(@.name == 'language')]"
+    then:
+      field: description
+      function: truthy
+
+  tmdb-page-param-must-be-integer:
+    description: The page parameter must be an integer type.
+    severity: error
+    given: "$.paths[*][*].parameters[?(@.name == 'page')].schema"
+    then:
+      field: type
+      function: enumeration
+      functionOptions:
+        values:
+          - integer
+
+  tmdb-path-id-params-must-be-integer:
+    description: Path parameters ending in _id (movie_id, series_id, person_id) must be integer type.
+    severity: warn
+    given: "$.paths[*][*].parameters[?(@.in == 'path' && @.name =~ /.*_id$/)]"
+    then:
+      field: schema.type
+      function: enumeration
+      functionOptions:
+        values:
+          - integer
+
+  tmdb-responses-define-json-content:
+    description: 200 responses must define application/json content.
+    severity: warn
+    given: "$.paths[*][get].responses.200"
+    then:
+      field: content
+      function: truthy
+
+  tmdb-info-must-have-contact:
+    description: The API info object should include contact information.
+    severity: warn
+    given: "$.info"
+    then:
+      field: contact
+      function: truthy
+
+  tmdb-parameters-must-have-descriptions:
+    description: All parameters should have descriptions for clarity.
+    severity: warn
+    given: "$.paths[*][*].parameters[*]"
+    then:
+      field: description
+      function: truthy

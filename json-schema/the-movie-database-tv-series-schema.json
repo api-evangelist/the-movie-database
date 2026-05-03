@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/the-movie-database/main/json-schema/the-movie-database-tv-series-schema.json",
+  "title": "TMDB TV Series",
+  "description": "A TV series object from The Movie Database API v3.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique TMDB identifier for the series."
+    },
+    "name": {
+      "type": "string",
+      "description": "Primary title of the TV series."
+    },
+    "original_name": {
+      "type": "string",
+      "description": "Title in the original language."
+    },
+    "original_language": {
+      "type": "string",
+      "description": "ISO 639-1 language code."
+    },
+    "overview": {
+      "type": "string",
+      "description": "Plot summary."
+    },
+    "tagline": {
+      "type": "string",
+      "description": "Series tagline."
+    },
+    "first_air_date": {
+      "type": "string",
+      "format": "date",
+      "description": "First broadcast date."
+    },
+    "last_air_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Most recent episode broadcast date."
+    },
+    "status": {
+      "type": "string",
+      "description": "Series status.",
+      "enum": ["Returning Series", "Planned", "In Production", "Ended", "Canceled", "Pilot"]
+    },
+    "type": {
+      "type": "string",
+      "description": "Series type (Scripted, Reality, Documentary, etc.)."
+    },
+    "in_production": {
+      "type": "boolean",
+      "description": "Whether the series is currently in production."
+    },
+    "number_of_episodes": {
+      "type": "integer",
+      "description": "Total number of episodes."
+    },
+    "number_of_seasons": {
+      "type": "integer",
+      "description": "Total number of seasons."
+    },
+    "episode_run_time": {
+      "type": "array",
+      "items": { "type": "integer" },
+      "description": "Episode run times in minutes."
+    },
+    "popularity": {
+      "type": "number",
+      "description": "TMDB popularity score."
+    },
+    "vote_average": {
+      "type": "number",
+      "description": "Average user rating (0-10)."
+    },
+    "vote_count": {
+      "type": "integer",
+      "description": "Total number of user votes."
+    },
+    "adult": {
+      "type": "boolean"
+    },
+    "poster_path": {
+      "type": "string",
+      "nullable": true
+    },
+    "backdrop_path": {
+      "type": "string",
+      "nullable": true
+    },
+    "homepage": {
+      "type": "string",
+      "format": "uri"
+    },
+    "genres": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "name": { "type": "string" }
+        }
+      }
+    },
+    "networks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "name": { "type": "string" },
+          "logo_path": { "type": "string", "nullable": true },
+          "origin_country": { "type": "string" }
+        }
+      }
+    },
+    "seasons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "season_number": { "type": "integer" },
+          "name": { "type": "string" },
+          "overview": { "type": "string" },
+          "air_date": { "type": "string", "format": "date" },
+          "episode_count": { "type": "integer" },
+          "poster_path": { "type": "string", "nullable": true }
+        }
+      }
+    },
+    "created_by": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "name": { "type": "string" },
+          "profile_path": { "type": "string", "nullable": true }
+        }
+      }
+    }
+  },
+  "required": ["id", "name"]
+}

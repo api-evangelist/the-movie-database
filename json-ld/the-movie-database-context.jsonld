@@ -1,0 +1,130 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "tmdb": "https://api.themoviedb.org/3/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "Movie": {
+      "@id": "schema:Movie"
+    },
+    "TVSeries": {
+      "@id": "schema:TVSeries"
+    },
+    "TVSeason": {
+      "@id": "schema:TVSeason"
+    },
+    "TVEpisode": {
+      "@id": "schema:TVEpisode"
+    },
+    "Person": {
+      "@id": "schema:Person"
+    },
+
+    "id": {
+      "@id": "tmdb:id",
+      "@type": "xsd:integer"
+    },
+    "title": {
+      "@id": "schema:name"
+    },
+    "name": {
+      "@id": "schema:name"
+    },
+    "overview": {
+      "@id": "schema:description"
+    },
+    "tagline": {
+      "@id": "schema:slogan"
+    },
+    "release_date": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:date"
+    },
+    "first_air_date": {
+      "@id": "schema:startDate",
+      "@type": "xsd:date"
+    },
+    "last_air_date": {
+      "@id": "schema:endDate",
+      "@type": "xsd:date"
+    },
+    "runtime": {
+      "@id": "schema:duration"
+    },
+    "homepage": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "imdb_id": {
+      "@id": "schema:sameAs",
+      "@type": "@id"
+    },
+    "vote_average": {
+      "@id": "schema:ratingValue",
+      "@type": "xsd:decimal"
+    },
+    "vote_count": {
+      "@id": "schema:ratingCount",
+      "@type": "xsd:integer"
+    },
+    "popularity": {
+      "@id": "tmdb:popularity",
+      "@type": "xsd:decimal"
+    },
+    "adult": {
+      "@id": "schema:isFamilyFriendly",
+      "@type": "xsd:boolean"
+    },
+    "budget": {
+      "@id": "tmdb:budget",
+      "@type": "xsd:integer"
+    },
+    "revenue": {
+      "@id": "tmdb:revenue",
+      "@type": "xsd:integer"
+    },
+    "poster_path": {
+      "@id": "schema:image"
+    },
+    "backdrop_path": {
+      "@id": "schema:image"
+    },
+    "genres": {
+      "@id": "schema:genre",
+      "@container": "@set"
+    },
+    "original_language": {
+      "@id": "schema:inLanguage"
+    },
+    "production_companies": {
+      "@id": "schema:productionCompany",
+      "@container": "@set"
+    },
+    "keywords": {
+      "@id": "schema:keywords",
+      "@container": "@set"
+    },
+    "recommendations": {
+      "@id": "schema:significantLink",
+      "@container": "@set"
+    },
+    "credits": {
+      "@id": "schema:actor",
+      "@container": "@set"
+    },
+    "seasons": {
+      "@id": "schema:containsSeason",
+      "@container": "@set"
+    },
+    "number_of_seasons": {
+      "@id": "schema:numberOfSeasons",
+      "@type": "xsd:integer"
+    },
+    "number_of_episodes": {
+      "@id": "schema:numberOfEpisodes",
+      "@type": "xsd:integer"
+    }
+  }
+}

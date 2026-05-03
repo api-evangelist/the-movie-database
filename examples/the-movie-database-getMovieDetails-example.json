@@ -1,0 +1,64 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://api.themoviedb.org/3/movie/27205?language=en-US",
+    "headers": {
+      "Authorization": "Bearer YOUR_ACCESS_TOKEN",
+      "accept": "application/json"
+    },
+    "parameters": {
+      "movie_id": 27205,
+      "language": "en-US"
+    }
+  },
+  "response": {
+    "id": 27205,
+    "title": "Inception",
+    "original_title": "Inception",
+    "original_language": "en",
+    "overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: inception.",
+    "tagline": "Your mind is the scene of the crime.",
+    "release_date": "2010-07-15",
+    "runtime": 148,
+    "status": "Released",
+    "adult": false,
+    "budget": 160000000,
+    "revenue": 836836967,
+    "popularity": 84.256,
+    "vote_average": 8.369,
+    "vote_count": 36198,
+    "imdb_id": "tt1375666",
+    "homepage": "https://www.warnerbros.com/movies/inception",
+    "poster_path": "/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg",
+    "backdrop_path": "/s3TBrRGB1iav7gFOCNx3H31MoES.jpg",
+    "genres": [
+      { "id": 28, "name": "Action" },
+      { "id": 878, "name": "Science Fiction" },
+      { "id": 12, "name": "Adventure" }
+    ],
+    "production_companies": [
+      {
+        "id": 923,
+        "name": "Legendary Entertainment",
+        "logo_path": "/8M99Dkt23MjQMTTkTNHGjBLeCEY.png",
+        "origin_country": "US"
+      },
+      {
+        "id": 174,
+        "name": "Warner Bros. Pictures",
+        "logo_path": "/IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      { "iso_3166_1": "GB", "name": "United Kingdom" },
+      { "iso_3166_1": "US", "name": "United States of America" }
+    ],
+    "spoken_languages": [
+      { "iso_639_1": "en", "name": "English", "english_name": "English" },
+      { "iso_639_1": "fr", "name": "Français", "english_name": "French" },
+      { "iso_639_1": "ja", "name": "日本語", "english_name": "Japanese" }
+    ],
+    "belongs_to_collection": null
+  }
+}

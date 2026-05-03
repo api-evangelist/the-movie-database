@@ -1,0 +1,39 @@
+{
+  "title": "TMDB Search Response Structure",
+  "description": "Paginated response structure used by TMDB search and discovery endpoints (search/movie, search/tv, discover/movie, etc.).",
+  "type": "object",
+  "structure": {
+    "page": {
+      "type": "integer",
+      "description": "Current page number (1-based)."
+    },
+    "results": {
+      "type": "array",
+      "description": "Array of results for the current page. Item shape varies by endpoint (movie, TV series, person, etc.).",
+      "items": {
+        "id": { "type": "integer", "description": "TMDB ID." },
+        "title": { "type": "string", "description": "Movie title (movies only)." },
+        "name": { "type": "string", "description": "Series name (TV series only)." },
+        "overview": { "type": "string", "description": "Plot summary." },
+        "release_date": { "type": "string", "description": "Release date (movies)." },
+        "first_air_date": { "type": "string", "description": "First air date (TV series)." },
+        "vote_average": { "type": "number", "description": "Average user rating." },
+        "vote_count": { "type": "integer", "description": "Number of votes." },
+        "popularity": { "type": "number", "description": "TMDB popularity score." },
+        "poster_path": { "type": "string", "description": "Poster image path (prepend image base URL)." },
+        "backdrop_path": { "type": "string", "description": "Backdrop image path." },
+        "genre_ids": { "type": "array", "description": "Array of genre IDs for the result." },
+        "adult": { "type": "boolean" },
+        "original_language": { "type": "string" }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "description": "Total number of pages available."
+    },
+    "total_results": {
+      "type": "integer",
+      "description": "Total number of results matching the query."
+    }
+  }
+}
