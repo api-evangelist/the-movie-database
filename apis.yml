@@ -90,6 +90,8 @@ common:
   url: https://raw.githubusercontent.com/api-evangelist/the-movie-database/refs/heads/main/openapi/the-movie-database-openapi.json
 - type: Pricing
   url: https://www.themoviedb.org/api-terms-of-use
+- type: LLMsTxt
+  url: https://developer.themoviedb.org/llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
