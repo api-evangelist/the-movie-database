@@ -73,13 +73,13 @@ apis:
     integrations:
       - url: https://developer.themoviedb.org/docs/wrappers-and-libraries
         name: Official Wrappers and Libraries
-        type: SDK
+        type: SDKs
 common:
   - type: Website
     url: https://www.themoviedb.org/
   - type: Documentation
     url: https://developer.themoviedb.org/docs/getting-started
-  - type: SignUp
+  - type: Signup
     url: https://www.themoviedb.org/signup
   - type: Login
     url: https://www.themoviedb.org/login
@@ -92,7 +92,7 @@ common:
       https://raw.githubusercontent.com/api-evangelist/the-movie-database/refs/heads/main/openapi/the-movie-database-openapi.json
   - type: Pricing
     url: https://www.themoviedb.org/api-terms-of-use
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://developer.themoviedb.org/llms.txt
 maintainers:
   - FN: Kin Lane
