@@ -75,6 +75,10 @@ apis:
         name: Official Wrappers and Libraries
         type: SDKs
 common:
+  - type: DomainSecurity
+    url: security/the-movie-database-domain-security.yml
+  - type: Authentication
+    url: authentication/the-movie-database-authentication.yml
   - type: Website
     url: https://www.themoviedb.org/
   - type: Documentation
