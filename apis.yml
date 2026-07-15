@@ -75,6 +75,8 @@ apis:
         name: Official Wrappers and Libraries
         type: SDKs
 common:
+  - type: AgenticAccess
+    url: agentic-access/the-movie-database-agentic-access.yml
   - type: DomainSecurity
     url: security/the-movie-database-domain-security.yml
   - type: Authentication

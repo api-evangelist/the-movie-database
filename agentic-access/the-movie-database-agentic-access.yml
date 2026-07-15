@@ -1,0 +1,1638 @@
+generated: '2026-07-15'
+method: generated
+source: openapi/the-movie-database-openapi.json
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 152
+  by_action_class:
+    connected: 135
+    acting: 17
+  by_consequence:
+    read: 135
+    write: 17
+  human_in_the_loop_required: 0
+operations:
+- path: /3/authentication
+  method: get
+  operationId: authentication-validate-key
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/account/{account_id}
+  method: get
+  operationId: account-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/account/{account_id}/favorite
+  method: post
+  operationId: account-add-favorite
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/account/{account_id}/watchlist
+  method: post
+  operationId: account-add-to-watchlist
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/account/{account_id}/favorite/movies
+  method: get
+  operationId: account-get-favorites
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/account/{account_id}/favorite/tv
+  method: get
+  operationId: account-favorite-tv
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/account/{account_id}/lists
+  method: get
+  operationId: account-lists
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/account/{account_id}/rated/movies
+  method: get
+  operationId: account-rated-movies
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/account/{account_id}/rated/tv
+  method: get
+  operationId: account-rated-tv
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/account/{account_id}/rated/tv/episodes
+  method: get
+  operationId: account-rated-tv-episodes
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/account/{account_id}/watchlist/movies
+  method: get
+  operationId: account-watchlist-movies
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/account/{account_id}/watchlist/tv
+  method: get
+  operationId: account-watchlist-tv
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/authentication/guest_session/new
+  method: get
+  operationId: authentication-create-guest-session
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/authentication/token/new
+  method: get
+  operationId: authentication-create-request-token
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/authentication/session/new
+  method: post
+  operationId: authentication-create-session
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/authentication/session/convert/4
+  method: post
+  operationId: authentication-create-session-from-v4-token
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/authentication/token/validate_with_login
+  method: post
+  operationId: authentication-create-session-from-login
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/authentication/session
+  method: delete
+  operationId: authentication-delete-session
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/certification/movie/list
+  method: get
+  operationId: certification-movie-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/certification/tv/list
+  method: get
+  operationId: certifications-tv-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/changes
+  method: get
+  operationId: changes-movie-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/person/changes
+  method: get
+  operationId: changes-people-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/changes
+  method: get
+  operationId: changes-tv-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/collection/{collection_id}
+  method: get
+  operationId: collection-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/collection/{collection_id}/images
+  method: get
+  operationId: collection-images
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/collection/{collection_id}/translations
+  method: get
+  operationId: collection-translations
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/company/{company_id}
+  method: get
+  operationId: company-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/company/{company_id}/alternative_names
+  method: get
+  operationId: company-alternative-names
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/company/{company_id}/images
+  method: get
+  operationId: company-images
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/configuration
+  method: get
+  operationId: configuration-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/configuration/countries
+  method: get
+  operationId: configuration-countries
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/configuration/jobs
+  method: get
+  operationId: configuration-jobs
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/configuration/languages
+  method: get
+  operationId: configuration-languages
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/configuration/primary_translations
+  method: get
+  operationId: configuration-primary-translations
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/configuration/timezones
+  method: get
+  operationId: configuration-timezones
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/credit/{credit_id}
+  method: get
+  operationId: credit-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/discover/movie
+  method: get
+  operationId: discover-movie
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/discover/tv
+  method: get
+  operationId: discover-tv
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/find/{external_id}
+  method: get
+  operationId: find-by-id
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/genre/movie/list
+  method: get
+  operationId: genre-movie-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/genre/tv/list
+  method: get
+  operationId: genre-tv-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/guest_session/{guest_session_id}/rated/movies
+  method: get
+  operationId: guest-session-rated-movies
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/guest_session/{guest_session_id}/rated/tv
+  method: get
+  operationId: guest-session-rated-tv
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/guest_session/{guest_session_id}/rated/tv/episodes
+  method: get
+  operationId: guest-session-rated-tv-episodes
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/keyword/{keyword_id}
+  method: get
+  operationId: keyword-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/keyword/{keyword_id}/movies
+  method: get
+  operationId: keyword-movies
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/list/{list_id}/add_item
+  method: post
+  operationId: list-add-movie
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/list/{list_id}/item_status
+  method: get
+  operationId: list-check-item-status
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/list/{list_id}/clear
+  method: post
+  operationId: list-clear
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/list
+  method: post
+  operationId: list-create
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/list/{list_id}
+  method: delete
+  operationId: list-delete
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/list/{list_id}
+  method: get
+  operationId: list-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/list/{list_id}/remove_item
+  method: post
+  operationId: list-remove-movie
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/movie/now_playing
+  method: get
+  operationId: movie-now-playing-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/popular
+  method: get
+  operationId: movie-popular-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/top_rated
+  method: get
+  operationId: movie-top-rated-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/upcoming
+  method: get
+  operationId: movie-upcoming-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}
+  method: get
+  operationId: movie-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/account_states
+  method: get
+  operationId: movie-account-states
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/alternative_titles
+  method: get
+  operationId: movie-alternative-titles
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/changes
+  method: get
+  operationId: movie-changes
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/credits
+  method: get
+  operationId: movie-credits
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/external_ids
+  method: get
+  operationId: movie-external-ids
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/images
+  method: get
+  operationId: movie-images
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/keywords
+  method: get
+  operationId: movie-keywords
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/latest
+  method: get
+  operationId: movie-latest-id
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/lists
+  method: get
+  operationId: movie-lists
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/recommendations
+  method: get
+  operationId: movie-recommendations
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/release_dates
+  method: get
+  operationId: movie-release-dates
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/reviews
+  method: get
+  operationId: movie-reviews
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/similar
+  method: get
+  operationId: movie-similar
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/translations
+  method: get
+  operationId: movie-translations
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/videos
+  method: get
+  operationId: movie-videos
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/watch/providers
+  method: get
+  operationId: movie-watch-providers
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/movie/{movie_id}/rating
+  method: post
+  operationId: movie-add-rating
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/movie/{movie_id}/rating
+  method: delete
+  operationId: movie-delete-rating
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/network/{network_id}
+  method: get
+  operationId: network-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/network/{network_id}/alternative_names
+  method: get
+  operationId: details-copy
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/network/{network_id}/images
+  method: get
+  operationId: alternative-names-copy
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/person/popular
+  method: get
+  operationId: person-popular-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/person/{person_id}
+  method: get
+  operationId: person-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/person/{person_id}/changes
+  method: get
+  operationId: person-changes
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/person/{person_id}/combined_credits
+  method: get
+  operationId: person-combined-credits
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/person/{person_id}/external_ids
+  method: get
+  operationId: person-external-ids
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/person/{person_id}/images
+  method: get
+  operationId: person-images
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/person/latest
+  method: get
+  operationId: person-latest-id
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/person/{person_id}/movie_credits
+  method: get
+  operationId: person-movie-credits
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/person/{person_id}/tv_credits
+  method: get
+  operationId: person-tv-credits
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/person/{person_id}/tagged_images
+  method: get
+  operationId: person-tagged-images
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/person/{person_id}/translations
+  method: get
+  operationId: translations
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/review/{review_id}
+  method: get
+  operationId: review-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/search/collection
+  method: get
+  operationId: search-collection
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/search/company
+  method: get
+  operationId: search-company
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/search/keyword
+  method: get
+  operationId: search-keyword
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/search/movie
+  method: get
+  operationId: search-movie
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/search/multi
+  method: get
+  operationId: search-multi
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/search/person
+  method: get
+  operationId: search-person
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/search/tv
+  method: get
+  operationId: search-tv
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/trending/all/{time_window}
+  method: get
+  operationId: trending-all
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/trending/movie/{time_window}
+  method: get
+  operationId: trending-movies
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/trending/person/{time_window}
+  method: get
+  operationId: trending-people
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/trending/tv/{time_window}
+  method: get
+  operationId: trending-tv
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/airing_today
+  method: get
+  operationId: tv-series-airing-today-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/on_the_air
+  method: get
+  operationId: tv-series-on-the-air-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/popular
+  method: get
+  operationId: tv-series-popular-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/top_rated
+  method: get
+  operationId: tv-series-top-rated-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}
+  method: get
+  operationId: tv-series-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/account_states
+  method: get
+  operationId: tv-series-account-states
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/aggregate_credits
+  method: get
+  operationId: tv-series-aggregate-credits
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/alternative_titles
+  method: get
+  operationId: tv-series-alternative-titles
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/changes
+  method: get
+  operationId: tv-series-changes
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/content_ratings
+  method: get
+  operationId: tv-series-content-ratings
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/credits
+  method: get
+  operationId: tv-series-credits
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/episode_groups
+  method: get
+  operationId: tv-series-episode-groups
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/external_ids
+  method: get
+  operationId: tv-series-external-ids
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/images
+  method: get
+  operationId: tv-series-images
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/keywords
+  method: get
+  operationId: tv-series-keywords
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/latest
+  method: get
+  operationId: tv-series-latest-id
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/lists
+  method: get
+  operationId: lists-copy
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/recommendations
+  method: get
+  operationId: tv-series-recommendations
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/reviews
+  method: get
+  operationId: tv-series-reviews
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/screened_theatrically
+  method: get
+  operationId: tv-series-screened-theatrically
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/similar
+  method: get
+  operationId: tv-series-similar
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/translations
+  method: get
+  operationId: tv-series-translations
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/videos
+  method: get
+  operationId: tv-series-videos
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/watch/providers
+  method: get
+  operationId: tv-series-watch-providers
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/rating
+  method: post
+  operationId: tv-series-add-rating
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/tv/{series_id}/rating
+  method: delete
+  operationId: tv-series-delete-rating
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/tv/{series_id}/season/{season_number}
+  method: get
+  operationId: tv-season-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/account_states
+  method: get
+  operationId: tv-season-account-states
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/aggregate_credits
+  method: get
+  operationId: tv-season-aggregate-credits
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/season/{season_id}/changes
+  method: get
+  operationId: tv-season-changes-by-id
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/credits
+  method: get
+  operationId: tv-season-credits
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/external_ids
+  method: get
+  operationId: tv-season-external-ids
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/images
+  method: get
+  operationId: tv-season-images
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/translations
+  method: get
+  operationId: tv-season-translations
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/videos
+  method: get
+  operationId: tv-season-videos
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/watch/providers
+  method: get
+  operationId: tv-season-watch-providers
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/episode/{episode_number}
+  method: get
+  operationId: tv-episode-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/account_states
+  method: get
+  operationId: tv-episode-account-states
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/episode/{episode_id}/changes
+  method: get
+  operationId: tv-episode-changes-by-id
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/credits
+  method: get
+  operationId: tv-episode-credits
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/external_ids
+  method: get
+  operationId: tv-episode-external-ids
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/images
+  method: get
+  operationId: tv-episode-images
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/translations
+  method: get
+  operationId: tv-episode-translations
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/videos
+  method: get
+  operationId: tv-episode-videos
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/rating
+  method: post
+  operationId: tv-episode-add-rating
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/tv/{series_id}/season/{season_number}/episode/{episode_number}/rating
+  method: delete
+  operationId: tv-episode-delete-rating
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /3/tv/episode_group/{tv_episode_group_id}
+  method: get
+  operationId: tv-episode-group-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/watch/providers/regions
+  method: get
+  operationId: watch-providers-available-regions
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/watch/providers/movie
+  method: get
+  operationId: watch-providers-movie-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /3/watch/providers/tv
+  method: get
+  operationId: watch-provider-tv-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
