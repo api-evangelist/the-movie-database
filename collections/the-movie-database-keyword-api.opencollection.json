@@ -1,0 +1,77 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "tmdb-api Account Keyword API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Keyword",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/keyword/:keyword_id",
+            "params": [
+              {
+                "name": "keyword_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Details"
+        },
+        {
+          "info": {
+            "name": "Movies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/keyword/:keyword_id/movies",
+            "params": [
+              {
+                "name": "keyword_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include_adult",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Movies"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "tmdb-api Account Genre API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Genre",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Movie List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/genre/movie/list",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the list of official genres for movies."
+        },
+        {
+          "info": {
+            "name": "TV List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/genre/tv/list",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the list of official genres for TV shows."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

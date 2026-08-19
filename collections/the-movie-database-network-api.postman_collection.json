@@ -1,0 +1,347 @@
+{
+  "item": [
+    {
+      "id": "693b8e74-1447-46eb-88bc-53e718e66a8c",
+      "name": "Network",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "488a6f67-242f-4565-8aa2-e4cd058dd303",
+          "name": "Details",
+          "request": {
+            "name": "Details",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "network",
+                ":network_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "network_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f6a20aa8-5a1b-48e7-a305-ecec1e1867ac",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "network",
+                    ":network_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "network_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"headquarters\\\":\\\"New York City, New York\\\",\\\"homepage\\\":\\\"https://www.hbo.com\\\",\\\"id\\\":49,\\\"logo_path\\\":\\\"/tuomPhY2UtuPTqqFnKMVHvSb724.png\\\",\\\"name\\\":\\\"HBO\\\",\\\"origin_country\\\":\\\"US\\\"}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "82592e32-3287-48af-8598-bd9c4d87ab0a",
+          "name": "Alternative Names",
+          "request": {
+            "name": "Alternative Names",
+            "description": {
+              "content": "Get the alternative names of a network.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "network",
+                ":network_id",
+                "alternative_names"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "network_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "91466eaf-c775-459f-bdb4-88498b86f8ee",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "network",
+                    ":network_id",
+                    "alternative_names"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "network_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"id\\\":49,\\\"results\\\":[{\\\"name\\\":\\\"Home Box Office\\\",\\\"type\\\":\\\"\\\"},{\\\"name\\\":\\\"HBO HD\\\",\\\"type\\\":\\\"\\\"}]}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5d7660c7-c284-4a52-b2ec-42e1e0fc85a3",
+          "name": "Images",
+          "request": {
+            "name": "Images",
+            "description": {
+              "content": "Get the TV network logos by id.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "network",
+                ":network_id",
+                "images"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "network_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2f0df393-ce55-4e47-ae6f-0da60bdbc7a1",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "network",
+                    ":network_id",
+                    "images"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "network_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"id\\\":49,\\\"logos\\\":[{\\\"aspect_ratio\\\":2.425287356321839,\\\"file_path\\\":\\\"/tuomPhY2UtuPTqqFnKMVHvSb724.png\\\",\\\"height\\\":174,\\\"id\\\":\\\"5a7a67a40e0a26020a000091\\\",\\\"file_type\\\":\\\".svg\\\",\\\"vote_average\\\":5.318,\\\"vote_count\\\":3,\\\"width\\\":422},{\\\"aspect_ratio\\\":2.424242424242424,\\\"file_path\\\":\\\"/hizvY65SpyF3BPY2qsBZMgUOxjs.png\\\",\\\"height\\\":495,\\\"id\\\":\\\"63e7979663aad200858726da\\\",\\\"file_type\\\":\\\".png\\\",\\\"vote_average\\\":5.312,\\\"vote_count\\\":1,\\\"width\\\":1200}]}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.themoviedb.org",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "88ffbf50-61ef-47c8-9fe1-5f095b2b5e97",
+    "name": "tmdb-api Account Network API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

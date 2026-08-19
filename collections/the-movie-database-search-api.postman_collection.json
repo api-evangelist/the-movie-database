@@ -1,0 +1,916 @@
+{
+  "item": [
+    {
+      "id": "57f3d9ba-ffd3-41d2-9345-275fcd31deee",
+      "name": "Search",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ec680005-75df-4fe3-bbf1-ee75c22e6bfe",
+          "name": "Collection",
+          "request": {
+            "name": "Collection",
+            "description": {
+              "content": "Search for collections by their original, translated and alternative names.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "search",
+                "collection"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "include_adult",
+                  "value": "false"
+                },
+                {
+                  "disabled": false,
+                  "key": "language",
+                  "value": "en-US"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "region",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7c6a7083-ef38-41c9-a10e-e8d9b14eab83",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "search",
+                    "collection"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include_adult",
+                      "value": "false"
+                    },
+                    {
+                      "key": "language",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "region",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"page\\\":1,\\\"results\\\":[{\\\"adult\\\":false,\\\"backdrop_path\\\":\\\"/zuW6fOiusv4X9nnW3paHGfXcSll.jpg\\\",\\\"id\\\":86311,\\\"name\\\":\\\"The Avengers Collection\\\",\\\"original_language\\\":\\\"en\\\",\\\"original_name\\\":\\\"The Avengers Collection\\\",\\\"overview\\\":\\\"A superhero film series produced by Marvel Studios based on the Marvel Comics superhero team of the same name, and part of the Marvel Cinematic Universe (MCU).  The series features an ensemble cast from the Marvel Cinematic Universe series films, as they join forces for the peacekeeping organization S.H.I.E.L.D. led by Nick Fury.\\\",\\\"poster_path\\\":\\\"/yFSIUVTCvgYrpalUktulvk3Gi5Y.jpg\\\"}],\\\"total_pages\\\":1,\\\"total_results\\\":1}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b9c9003a-554b-4313-9fae-96f76aa812d5",
+          "name": "Company",
+          "request": {
+            "name": "Company",
+            "description": {
+              "content": "Search for companies by their original and alternative names.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "search",
+                "company"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a497e0b3-c104-414a-b3d3-4dd021186c7b",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "search",
+                    "company"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"page\\\":1,\\\"results\\\":[{\\\"id\\\":3268,\\\"logo_path\\\":\\\"/tuomPhY2UtuPTqqFnKMVHvSb724.png\\\",\\\"name\\\":\\\"HBO\\\",\\\"origin_country\\\":\\\"US\\\"},{\\\"id\\\":142414,\\\"logo_path\\\":\\\"/tC3oVZvqpwhAG1uSjpMnmj4nW3O.png\\\",\\\"name\\\":\\\"HBO Asia\\\",\\\"origin_country\\\":\\\"SG\\\"},{\\\"id\\\":143571,\\\"logo_path\\\":null,\\\"name\\\":\\\"HBO Showcase\\\",\\\"origin_country\\\":\\\"\\\"},{\\\"id\\\":14914,\\\"logo_path\\\":\\\"/1RZBWz53SpHUTLpRcM8BGv2plIP.png\\\",\\\"name\\\":\\\"HBO Documentary Films\\\",\\\"origin_country\\\":\\\"US\\\"},{\\\"id\\\":119349,\\\"logo_path\\\":null,\\\"name\\\":\\\"HBO Central Europe\\\",\\\"origin_country\\\":\\\"\\\"},{\\\"id\\\":48582,\\\"logo_path\\\":\\\"/tyoN6zoxMJ71GBddxVkk4dpaeze.png\\\",\\\"name\\\":\\\"HBO Europe\\\",\\\"origin_country\\\":\\\"\\\"},{\\\"id\\\":147188,\\\"logo_path\\\":null,\\\"name\\\":\\\"HBO / Cinemax\\\",\\\"origin_country\\\":\\\"\\\"},{\\\"id\\\":7429,\\\"logo_path\\\":\\\"/6in9uMqxXEHx5XgYgkeRBpZ4rPw.png\\\",\\\"name\\\":\\\"HBO Films\\\",\\\"origin_country\\\":\\\"US\\\"},{\\\"id\\\":158691,\\\"logo_path\\\":\\\"/s5ELD35ShWgVKQxgERHM2iP5bXA.png\\\",\\\"name\\\":\\\"HBO Max\\\",\\\"origin_country\\\":\\\"US\\\"},{\\\"id\\\":21222,\\\"logo_path\\\":\\\"/baMruKL2uRhJ1Soi4flSHVzXIH2.png\\\",\\\"name\\\":\\\"HBO Independent Productions\\\",\\\"origin_country\\\":\\\"US\\\"},{\\\"id\\\":27289,\\\"logo_path\\\":null,\\\"name\\\":\\\"HBO Bulgaria\\\",\\\"origin_country\\\":\\\"\\\"},{\\\"id\\\":128608,\\\"logo_path\\\":null,\\\"name\\\":\\\"H-Bomb Films\\\",\\\"origin_country\\\":\\\"\\\"},{\\\"id\\\":89525,\\\"logo_path\\\":null,\\\"name\\\":\\\"HBO Family\\\",\\\"origin_country\\\":\\\"\\\"},{\\\"id\\\":37659,\\\"logo_path\\\":\\\"/zfouUSOEq718TbB9YqN9OylPtD7.png\\\",\\\"name\\\":\\\"HBO Polska\\\",\\\"origin_country\\\":\\\"PL\\\"},{\\\"id\\\":136561,\\\"logo_path\\\":\\\"/mReKmOZLemFcWlMocCwiq3XbsbB.png\\\",\\\"name\\\":\\\"HBO Europe\\\",\\\"origin_country\\\":\\\"CZ\\\"},{\\\"id\\\":44618,\\\"logo_path\\\":\\\"/vh38lPSFvesAuOQ8r5TrUT9Vur5.png\\\",\\\"name\\\":\\\"HBO Latin America\\\",\\\"origin_country\\\":\\\"\\\"},{\\\"id\\\":67207,\\\"logo_path\\\":null,\\\"name\\\":\\\"HBO Downtown Productions\\\",\\\"origin_country\\\":\\\"\\\"},{\\\"id\\\":11489,\\\"logo_path\\\":null,\\\"name\\\":\\\"HBO/Cinemax Documentary\\\",\\\"origin_country\\\":\\\"\\\"},{\\\"id\\\":13670,\\\"logo_path\\\":null,\\\"name\\\":\\\"HBO Romania\\\",\\\"origin_country\\\":\\\"RO\\\"},{\\\"id\\\":6751,\\\"logo_path\\\":\\\"/giPzzhPdiNloiuwo7qLagRn5uGH.png\\\",\\\"name\\\":\\\"HBO Sports\\\",\\\"origin_country\\\":\\\"US\\\"}],\\\"total_pages\\\":2,\\\"total_results\\\":22}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "93c4cd86-6741-4988-a394-d3c4864fc34b",
+          "name": "Keyword",
+          "request": {
+            "name": "Keyword",
+            "description": {
+              "content": "Search for keywords by their name.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "search",
+                "keyword"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "854fbe5d-a342-4826-8911-a46aca22e660",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "search",
+                    "keyword"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"page\\\":1,\\\"results\\\":[{\\\"id\\\":262419,\\\"name\\\":\\\"lost\\\"},{\\\"id\\\":5930,\\\"name\\\":\\\"getting lost\\\"},{\\\"id\\\":249351,\\\"name\\\":\\\"lost wallet\\\"},{\\\"id\\\":213077,\\\"name\\\":\\\"lost youth\\\"},{\\\"id\\\":41309,\\\"name\\\":\\\"lost of friend\\\"},{\\\"id\\\":215483,\\\"name\\\":\\\"lost daughter\\\"},{\\\"id\\\":251248,\\\"name\\\":\\\"paradise lost\\\"},{\\\"id\\\":215583,\\\"name\\\":\\\"lost colony\\\"},{\\\"id\\\":215678,\\\"name\\\":\\\"partially lost film\\\"},{\\\"id\\\":163088,\\\"name\\\":\\\"lost tribe\\\"},{\\\"id\\\":222130,\\\"name\\\":\\\"lost continent\\\"},{\\\"id\\\":223620,\\\"name\\\":\\\"lost in the woods\\\"},{\\\"id\\\":169953,\\\"name\\\":\\\"lost treasure\\\"},{\\\"id\\\":170333,\\\"name\\\":\\\"innocence lost\\\"},{\\\"id\\\":225280,\\\"name\\\":\\\"partly lost\\\"},{\\\"id\\\":227948,\\\"name\\\":\\\"lost children\\\"},{\\\"id\\\":288632,\\\"name\\\":\\\"lost girl\\\"},{\\\"id\\\":179553,\\\"name\\\":\\\"lost pet\\\"},{\\\"id\\\":179578,\\\"name\\\":\\\"lost at sea\\\"},{\\\"id\\\":181429,\\\"name\\\":\\\"lost film\\\"}],\\\"total_pages\\\":5,\\\"total_results\\\":84}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3055a2b9-e8ee-4809-89cd-332846f1440c",
+          "name": "Movie",
+          "request": {
+            "name": "Movie",
+            "description": {
+              "content": "Search for movies by their original, translated and alternative titles.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "search",
+                "movie"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "include_adult",
+                  "value": "false"
+                },
+                {
+                  "disabled": false,
+                  "key": "language",
+                  "value": "en-US"
+                },
+                {
+                  "disabled": false,
+                  "key": "primary_release_year",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "region",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "year",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "911d6589-b99b-4a6f-aad8-246274efbfde",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "search",
+                    "movie"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include_adult",
+                      "value": "false"
+                    },
+                    {
+                      "key": "language",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "primary_release_year",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "region",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "year",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"page\\\":1,\\\"results\\\":[{\\\"adult\\\":false,\\\"backdrop_path\\\":\\\"/hZkgoQYus5vegHoetLkCJzb17zJ.jpg\\\",\\\"genre_ids\\\":[18,53,35],\\\"id\\\":550,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Fight Club\\\",\\\"overview\\\":\\\"A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \\\\\\\"fight clubs\\\\\\\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.\\\",\\\"popularity\\\":73.433,\\\"poster_path\\\":\\\"/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg\\\",\\\"release_date\\\":\\\"1999-10-15\\\",\\\"title\\\":\\\"Fight Club\\\",\\\"video\\\":false,\\\"vote_average\\\":8.433,\\\"vote_count\\\":26279},{\\\"adult\\\":false,\\\"backdrop_path\\\":\\\"/1VqE5z4VIOcNcajJuHLk4fDkY9G.jpg\\\",\\\"genre_ids\\\":[28,27],\\\"id\\\":289732,\\\"original_language\\\":\\\"zh\\\",\\\"original_title\\\":\\\"屍城\\\",\\\"overview\\\":\\\"It's the end of the century at a corner of the city in a building riddled with crime - Everyone in the building has turned into zombies. After Jenny's boyfriend is killed in a zombie attack, she faces the challenge of surviving in the face of adversity. In order to stay alive, she struggles with Andy to flee danger.\\\",\\\"popularity\\\":15.263,\\\"poster_path\\\":\\\"/u8u3KVq0qfJYmNDsaTVOXy4So6f.jpg\\\",\\\"release_date\\\":\\\"2014-10-23\\\",\\\"title\\\":\\\"Zombie Fight Club\\\",\\\"video\\\":false,\\\"vote_average\\\":4.721,\\\"vote_count\\\":52},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[35,18],\\\"id\\\":323667,\\\"original_language\\\":\\\"ru\\\",\\\"original_title\\\":\\\"Вставай и бейся\\\",\\\"overview\\\":\\\"Intertwined stories from the gladiator/athletes participating to the Calcio Storico Fiorentino yearly championship.\\\",\\\"popularity\\\":2.744,\\\"poster_path\\\":\\\"/rPCOC0myV3Vr7nYGMAOAOpUXgH3.jpg\\\",\\\"release_date\\\":\\\"2015-06-21\\\",\\\"title\\\":\\\"Florence Fight Club\\\",\\\"video\\\":false,\\\"vote_average\\\":5.722,\\\"vote_count\\\":9},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[],\\\"id\\\":973534,\\\"original_language\\\":\\\"ru\\\",\\\"original_title\\\":\\\"Бойцовский клуб (русская версия)\\\",\\\"overview\\\":\\\"The Russian version of the movie \\\\\\\"Fight Club\\\\\\\" is not just a Russian version of a well-known cult film, it is the result and of the hard work of two young men and their love for cinema, Alexander Kukhar (GOLOBON-TV) and Dmitry Ivanov (GRIZLIK FILM) , who are responsible for this project, from the development of its idea and the selection of the cast, to the organization of filming and financial support.  Filming lasted a whole year. Everyday work, constant trips, searching for suitable film sets and an exhausting schedule - all this was not in vain and resulted in an unusually amazing and original project - the film \\\\\\\"Fight Club\\\\\\\", created in the very heart of southern Russia, in the city of Krasnodar, by two young people\\\",\\\"popularity\\\":0.874,\\\"poster_path\\\":null,\\\"release_date\\\":\\\"\\\",\\\"title\\\":\\\"Fight Club (Russian version)\\\",\\\"video\\\":false,\\\"vote_average\\\":7.4,\\\"vote_count\\\":6},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[],\\\"id\\\":883656,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"GCW Fight Club\\\",\\\"overview\\\":\\\"GCW presents Fight Club straight from the Showboat Hotel in Atlantic City, NJ! The event features the GCW World Championship match where Mox defends against Gage in a match that we have been waiting for during the last decade. Who will be the new GCW World Champion?\\\",\\\"popularity\\\":1.953,\\\"poster_path\\\":\\\"/a9RWdhRLyx3BqCjlwmZJHXyeMkR.jpg\\\",\\\"release_date\\\":\\\"2021-10-09\\\",\\\"title\\\":\\\"GCW Fight Club\\\",\\\"video\\\":true,\\\"vote_average\\\":6.5,\\\"vote_count\\\":5},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[28],\\\"id\\\":347807,\\\"original_language\\\":\\\"hi\\\",\\\"original_title\\\":\\\"Fight Club: Members Only\\\",\\\"overview\\\":\\\"Four friends head off to Bombay and get involved in the mother and father of all gang wars.\\\",\\\"popularity\\\":2.26,\\\"poster_path\\\":\\\"/aXFmWfWYCCxQTkCn7K86RvDiMHZ.jpg\\\",\\\"release_date\\\":\\\"2006-02-17\\\",\\\"title\\\":\\\"Fight Club: Members Only\\\",\\\"video\\\":false,\\\"vote_average\\\":4.5,\\\"vote_count\\\":12},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[99],\\\"id\\\":259016,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Insane Fight Club\\\",\\\"overview\\\":\\\"A group of friends have created a brand new subculture that is taking over the streets of Glasgow. They've established their very own fight club, but this is no ordinary wrestling event - this is brutal, riotous chaos. Fights don't always stay inside the ring, people are bounced off the side of buses and thrown off balconies in pubs. They now plan the biggest show of their lives. The stakes are high, will it bring them the fame and recognition they need to survive?\\\",\\\"popularity\\\":1.614,\\\"poster_path\\\":null,\\\"release_date\\\":\\\"2014-03-11\\\",\\\"title\\\":\\\"Insane Fight Club\\\",\\\"video\\\":false,\\\"vote_average\\\":4.333,\\\"vote_count\\\":3},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[28,18,80],\\\"id\\\":51021,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Lure: Teen Fight Club\\\",\\\"overview\\\":\\\"A community is under siege as three Belmont Highschool coed students go missing with no trace of their whereabouts. The pressure is on the police to capture the culprits responsible. Scouring the school hallways in search of clues, undercover female detective Maggie Rawdon (Jessica Sonnerborn) enters Belmont High as a transfer student in an attempt to solve the hideous disappearance of the students. Maggie makes a few new friends, and gets invited to a private rave in the country. Just as the group begins to suspect that they've taken a wrong turn, however, the trap is sprung and Maggie finds out firsthand what fate has befallen the missing girls.\\\",\\\"popularity\\\":0.983,\\\"poster_path\\\":\\\"/ipl6NdM0LwyakzLH9gKBDn8YhmZ.jpg\\\",\\\"release_date\\\":\\\"2010-11-16\\\",\\\"title\\\":\\\"Lure: Teen Fight Club\\\",\\\"video\\\":false,\\\"vote_average\\\":5.556,\\\"vote_count\\\":9},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[28,99,12],\\\"id\\\":104782,\\\"original_language\\\":\\\"it\\\",\\\"original_title\\\":\\\"Florence Fight Club\\\",\\\"overview\\\":\\\"Four men decided to enter in the oldest Fight Club of the History, The Florentine Football tournament. A father and son, a black guy, an old champion and outsider clerk will enter in an arena of the time to win their fears, to go over their limits, to be heroes for a day.\\\",\\\"popularity\\\":0.6,\\\"poster_path\\\":null,\\\"release_date\\\":\\\"2010-01-01\\\",\\\"title\\\":\\\"Florence Fight Club\\\",\\\"video\\\":false,\\\"vote_average\\\":7.0,\\\"vote_count\\\":1},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[99],\\\"id\\\":532155,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Musangwe: Fight Club\\\",\\\"overview\\\":\\\"The first rule is that there are no rules. For the bare-knuckle combatants competing in Musangwe fights, anything goes - you can even put a curse on him. The sport, which dates back centuries, has become a South African institution. Any male from the age of nine to ninety can compete. We follow a group of fighters as they slug it out in the ring. Who will be this year's champion?\\\",\\\"popularity\\\":0.6,\\\"poster_path\\\":\\\"/tZDxttt0LfgAKwvLIWyOO3fr01c.jpg\\\",\\\"release_date\\\":\\\"2007-10-01\\\",\\\"title\\\":\\\"Musangwe: Fight Club\\\",\\\"video\\\":false,\\\"vote_average\\\":6.25,\\\"vote_count\\\":4},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[],\\\"id\\\":289100,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Girls Fight Club\\\",\\\"overview\\\":\\\"The best women's wrestling competition of all time...and if you think it's fake you're in for a big surprise See LEGENDARY Mixed Martial Arts fighters coach their teams to victory in the cage! aka Chuck Lidell's Girl's Fight Club\\\",\\\"popularity\\\":0.6,\\\"poster_path\\\":null,\\\"release_date\\\":\\\"2009-06-18\\\",\\\"title\\\":\\\"Girls Fight Club\\\",\\\"video\\\":false,\\\"vote_average\\\":5.25,\\\"vote_count\\\":2},{\\\"adult\\\":false,\\\"backdrop_path\\\":\\\"/lBENxZ1nmHXkTKV0AJu1agnW8Mg.jpg\\\",\\\"genre_ids\\\":[],\\\"id\\\":877672,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Superhero Fight Club\\\",\\\"overview\\\":\\\"Oliver introduces Barry to his own little fight club which features such members as Roy Harper, Laurel Lance, Malcolm Merlyn and Ra's Al Ghul.\\\",\\\"popularity\\\":0.6,\\\"poster_path\\\":\\\"/riAUCTb0NBakJxlBMB801gQlF1j.jpg\\\",\\\"release_date\\\":\\\"2015-04-13\\\",\\\"title\\\":\\\"Superhero Fight Club\\\",\\\"video\\\":false,\\\"vote_average\\\":6.375,\\\"vote_count\\\":9},{\\\"adult\\\":false,\\\"backdrop_path\\\":\\\"/z8MzErK9gYLHgvqYKMapqk7rqyZ.jpg\\\",\\\"genre_ids\\\":[],\\\"id\\\":877673,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Superhero Fight Club 2.0\\\",\\\"overview\\\":\\\"Barry and Oliver introduce Supergirl to the new fight club, Felicity and Cisco applying additional features to the fight in which The Flash, Green Arrow, Supergirl, White Canary, Firestorm and Atom need to fight to stay alive.\\\",\\\"popularity\\\":0.632,\\\"poster_path\\\":\\\"/edt0iegDlAqPddRunIixcpNsja4.jpg\\\",\\\"release_date\\\":\\\"2016-09-29\\\",\\\"title\\\":\\\"Superhero Fight Club 2.0\\\",\\\"video\\\":false,\\\"vote_average\\\":6.5,\\\"vote_count\\\":6},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[16,35],\\\"id\\\":615408,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Fight Club But With Tennis And No Fight\\\",\\\"overview\\\":\\\"Drama descends upon two tennis-obsessed women as the tension moves from off the court and into the café.\\\",\\\"popularity\\\":0.6,\\\"poster_path\\\":\\\"/8pEQqVtSpgCtb7dzhR55EO1dC3l.jpg\\\",\\\"release_date\\\":\\\"2019-07-13\\\",\\\"title\\\":\\\"Fight Club But With Tennis And No Fight\\\",\\\"video\\\":false,\\\"vote_average\\\":7.0,\\\"vote_count\\\":1},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[],\\\"id\\\":969532,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"GCW: Fight Club Houston\\\",\\\"overview\\\":\\\"On July 9th GCW presents Fight Club Houston straight from Premier Arena in Houston, Texas. The lineup is almost completed, check it below:  AJ Gray vs Bryan Keith  Nick Gage vs Sadika  Joey Janela vs Dante  Ninja Mack vs Jack Cartwheel  Effy vs Gino  Jimmy Lloyd vs Carter  Lucha Scramble  .... more to be added soon!\\\",\\\"popularity\\\":0.6,\\\"poster_path\\\":\\\"/353CATo61TQERENVF6AqIqhUD51.jpg\\\",\\\"release_date\\\":\\\"2021-07-09\\\",\\\"title\\\":\\\"GCW: Fight Club Houston\\\",\\\"video\\\":true,\\\"vote_average\\\":5.0,\\\"vote_count\\\":1},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[],\\\"id\\\":944789,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Leopard Fight Club\\\",\\\"overview\\\":\\\"Witness a remarkable coming-of-age story as we track a young leopard's journey from rookie to royalty in South Africa's lethal Big Five landscape. When we first meet Jack, he's clumsy, fearful, and weak, but he's a fast learner - and he'll need to be. He's destined for a showdown with the area's current leopard monarch, an alpha male with a real mean streak. We follow Jack as he hones his skills and builds up muscle for the ultimate catfight. It's a battle where only the winner will walk out alive.\\\",\\\"popularity\\\":0.6,\\\"poster_path\\\":\\\"/pNhu0kvxvBJhpzDEwKf9Zdphbfg.jpg\\\",\\\"release_date\\\":\\\"\\\",\\\"title\\\":\\\"Leopard Fight Club\\\",\\\"video\\\":false,\\\"vote_average\\\":6.0,\\\"vote_count\\\":1},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[99],\\\"id\\\":151912,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Jurassic Fight Club\\\",\\\"overview\\\":\\\"Jurassic Fight Club, a paleontology-based miniseries that ran for 12 episodes, depicts how prehistoric beasts hunted their prey, dissecting these battles and uncovering a predatory world far more calculated and complex than originally thought. It was hosted by George Blasing, a self-taught paleontologist.\\\",\\\"popularity\\\":0.742,\\\"poster_path\\\":null,\\\"release_date\\\":\\\"2008-10-22\\\",\\\"title\\\":\\\"Jurassic Fight Club\\\",\\\"video\\\":false,\\\"vote_average\\\":7.4,\\\"vote_count\\\":5},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[99],\\\"id\\\":322772,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Insane Fight Club II - This Time It’s Personal\\\",\\\"overview\\\":\\\"Insane Fight Club is back. This year the boys are taking their unique form of entertainment to England as they stage fight nights in Birmingham, Leeds, Liverpool and Newcastle.\\\",\\\"popularity\\\":2.348,\\\"poster_path\\\":null,\\\"release_date\\\":\\\"2015-01-21\\\",\\\"title\\\":\\\"Insane Fight Club II - This Time It’s Personal\\\",\\\"video\\\":false,\\\"vote_average\\\":7.0,\\\"vote_count\\\":2},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[],\\\"id\\\":818666,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Triller Fight Club: Jake Paul vs Ben Askren\\\",\\\"overview\\\":\\\"Jake Paul vs. Ben Askren is an professional boxing match between YouTuber Jake Paul and former MMA fighter Ben Askren.  The bout took take place on April 17, 2021, at the Mercedes-Benz Stadium in Atlanta, Georgia.\\\",\\\"popularity\\\":1.467,\\\"poster_path\\\":\\\"/pFxHnZhetfHpXlcYTNTFZFt6pBq.jpg\\\",\\\"release_date\\\":\\\"2021-04-17\\\",\\\"title\\\":\\\"Triller Fight Club: Jake Paul vs Ben Askren\\\",\\\"video\\\":true,\\\"vote_average\\\":5.0,\\\"vote_count\\\":3},{\\\"adult\\\":false,\\\"backdrop_path\\\":null,\\\"genre_ids\\\":[],\\\"id\\\":935845,\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"GCW: Fight Club 2 Houston\\\",\\\"overview\\\":\\\"Are you ready for the GCW: Fight Club 2?  On February 4th GCW: Fight Club 2 is live on FITE straight from Houston Premier Arena, TX!  Check the full lineup below:  4-way match  Mascara Dorada vs Gringo Loco vs Blake Christian vs ASF  Atticus Cogar vs Gino Medina  All-Star Scramble  Matthew Justice vs Allie Katch vs Grim Reefer vs Jimmy Lloyd vs Jordan Oliver vs Chris Carter  GCW Extreme Championship  AJ Gray vs Mysterious Q  Bryan Keith vs Effy  Ninja Mack vs Nick Wayne  Loko Wrestling Championship  Dante Leon vs Sam Stackhouse  Matt Tremont vs Sadika  *lineup subject to change\\\",\\\"popularity\\\":0.6,\\\"poster_path\\\":\\\"/bPPvoNxWcoqSvw0SnigOZpcxKmN.jpg\\\",\\\"release_date\\\":\\\"2022-02-04\\\",\\\"title\\\":\\\"GCW: Fight Club 2 Houston\\\",\\\"video\\\":true,\\\"vote_average\\\":8.0,\\\"vote_count\\\":1}],\\\"total_pages\\\":2,\\\"total_results\\\":39}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "be2156af-278c-490d-962d-31742e46660e",
+          "name": "Multi",
+          "request": {
+            "name": "Multi",
+            "description": {
+              "content": "Use multi search when you want to search for movies, TV shows and people in a single request.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "search",
+                "multi"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "include_adult",
+                  "value": "false"
+                },
+                {
+                  "disabled": false,
+                  "key": "language",
+                  "value": "en-US"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "db3d8ae4-70e5-4d20-b5df-9537e4dea021",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "search",
+                    "multi"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include_adult",
+                      "value": "false"
+                    },
+                    {
+                      "key": "language",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"page\": 1,\n  \"results\": [\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/aDYSnJAK0BTVeE8osOy22Kz3SXY.jpg\",\n      \"id\": 11,\n      \"title\": \"Star Wars\",\n      \"original_language\": \"en\",\n      \"original_title\": \"Star Wars\",\n      \"overview\": \"Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.\",\n      \"poster_path\": \"/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg\",\n      \"media_type\": \"movie\",\n      \"genre_ids\": [\n        12,\n        28,\n        878\n      ],\n      \"popularity\": 78.047,\n      \"release_date\": \"1977-05-25\",\n      \"video\": false,\n      \"vote_average\": 8.208,\n      \"vote_count\": 18528\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/iflKt34Ck2JpY2PY9wW1zwdJgJi.jpg\",\n      \"id\": 782054,\n      \"title\": \"Doraemon: Nobita's Little Star Wars 2021\",\n      \"original_language\": \"ja\",\n      \"original_title\": \"映画ドラえもん のび太の宇宙小戦争 2021\",\n      \"overview\": \"One day during summer vacation, a palm-sized alien named Papi appears from a small rocket that Nobita picks up. He is the president of Pirika, a small planet in outer space, and has come to Earth to escape the rebels. Doraemon and his friends are puzzled by Papi’s small size, but as they play together using the secret tool “Small Light”, they gradually become friends. However, a whale-shaped space battleship comes to earth and attacks Doraemon, Nobita and the others in order to capture Papi. Feeling responsible for getting everyone involved, Papi tries to stand up to the rebels. Doraemon and his friends leave for the planet Pirika to protect their dear friend and his home.\",\n      \"poster_path\": \"/48gKZioIDeUOI0afbYv3kh9u9RQ.jpg\",\n      \"media_type\": \"movie\",\n      \"genre_ids\": [\n        16,\n        878,\n        12\n      ],\n      \"popularity\": 33.466,\n      \"release_date\": \"2022-03-04\",\n      \"video\": false,\n      \"vote_average\": 5.825,\n      \"vote_count\": 60\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/ajztm40qDPqMONaSJhQ2PaNe2Xd.jpg\",\n      \"id\": 83867,\n      \"name\": \"Star Wars: Andor\",\n      \"original_language\": \"en\",\n      \"original_name\": \"Star Wars: Andor\",\n      \"overview\": \"The tale of the burgeoning rebellion against the Empire and how people and planets became involved. In an era filled with danger, deception and intrigue, Cassian Andor embarks on the path that is destined to turn him into a rebel hero.\",\n      \"poster_path\": \"/59SVNwLfoMnZPPB6ukW6dlPxAdI.jpg\",\n      \"media_type\": \"tv\",\n      \"genre_ids\": [\n        10765,\n        10759,\n        10768,\n        18\n      ],\n      \"popularity\": 87.697,\n      \"first_air_date\": \"2022-09-21\",\n      \"vote_average\": 8.223,\n      \"vote_count\": 671,\n      \"origin_country\": [\n        \"US\"\n      ]\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/7Q0diljpwSnUuHfxrZmexxztrEZ.jpg\",\n      \"id\": 114478,\n      \"name\": \"Star Wars: Visions\",\n      \"original_language\": \"ja\",\n      \"original_name\": \"スター・ウォーズ：ビジョンズ\",\n      \"overview\": \"An anthology series of animated short films celebrating Star Wars through the lens of the world's best anime creators.\",\n      \"poster_path\": \"/8yECMpsZ8wAvra4Sow6Bz9WOO5f.jpg\",\n      \"media_type\": \"tv\",\n      \"genre_ids\": [\n        16,\n        10765,\n        10759\n      ],\n      \"popularity\": 32.764,\n      \"first_air_date\": \"2021-09-22\",\n      \"vote_average\": 7.304,\n      \"vote_count\": 237,\n      \"origin_country\": [\n        \"JP\",\n        \"US\"\n      ]\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/m6eRgkR1KC6Mr6gKx6gKCzSn6vD.jpg\",\n      \"id\": 4194,\n      \"name\": \"Star Wars: The Clone Wars\",\n      \"original_language\": \"en\",\n      \"original_name\": \"Star Wars: The Clone Wars\",\n      \"overview\": \"Yoda, Obi-Wan Kenobi, Anakin Skywalker, Mace Windu and other Jedi Knights lead the Grand Army of the Republic against the droid army of the Separatists.\",\n      \"poster_path\": \"/e1nWfnnCVqxS2LeTO3dwGyAsG2V.jpg\",\n      \"media_type\": \"tv\",\n      \"genre_ids\": [\n        10759,\n        16,\n        10765\n      ],\n      \"popularity\": 93.955,\n      \"first_air_date\": \"2008-10-03\",\n      \"vote_average\": 8.48,\n      \"vote_count\": 1649,\n      \"origin_country\": [\n        \"US\"\n      ]\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/sjxtIUCWR74yPPcZFfTsToepfWm.jpg\",\n      \"id\": 105971,\n      \"name\": \"Star Wars: The Bad Batch\",\n      \"original_language\": \"en\",\n      \"original_name\": \"Star Wars: The Bad Batch\",\n      \"overview\": \"The 'Bad Batch' of elite and experimental clones make their way through an ever-changing galaxy in the immediate aftermath of the Clone Wars.\",\n      \"poster_path\": \"/5Q6z9bjy8dHKA5T8kNmCd8hj6Gl.jpg\",\n      \"media_type\": \"tv\",\n      \"genre_ids\": [\n        16,\n        10759,\n        10765\n      ],\n      \"popularity\": 56.538,\n      \"first_air_date\": \"2021-05-04\",\n      \"vote_average\": 8.334,\n      \"vote_count\": 738,\n      \"origin_country\": [\n        \"US\"\n      ]\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/AdJgkXb8oLI8e4rsk8XzkvABIuw.jpg\",\n      \"id\": 60554,\n      \"name\": \"Star Wars Rebels\",\n      \"original_language\": \"en\",\n      \"original_name\": \"Star Wars Rebels\",\n      \"overview\": \"Set between the events of Star Wars: Episodes III and IV, the story unfolds during a dark time when the evil Galactic Empire is tightening its grip of power on the galaxy. Imperial forces have occupied a remote planet and are ruining the lives of its people. The motley but clever crew of the starship Ghost — cowboy Jedi Kanan, ace pilot Hera, street-smart teenager Ezra, the “muscle” Zeb, warrior firebrand Sabine, and cantankerous old astromech droid Chopper — is among a select few who are brave enough to stand against the Empire. Together, they will face threatening new villains, encounter colorful adversaries, embark on thrilling adventures, and become heroes with the power to ignite a rebellion.\",\n      \"poster_path\": \"/vOUxo5sfXyQPIoF8rtYK1OVVBPi.jpg\",\n      \"media_type\": \"tv\",\n      \"genre_ids\": [\n        10759,\n        16,\n        10765\n      ],\n      \"popularity\": 57.151,\n      \"first_air_date\": \"2014-10-13\",\n      \"vote_average\": 7.667,\n      \"vote_count\": 650,\n      \"origin_country\": [\n        \"US\"\n      ]\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/8BTsTfln4jlQrLXUBquXJ0ASQy9.jpg\",\n      \"id\": 140607,\n      \"title\": \"Star Wars: The Force Awakens\",\n      \"original_language\": \"en\",\n      \"original_title\": \"Star Wars: The Force Awakens\",\n      \"overview\": \"Thirty years after defeating the Galactic Empire, Han Solo and his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers.\",\n      \"poster_path\": \"/wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg\",\n      \"media_type\": \"movie\",\n      \"genre_ids\": [\n        12,\n        28,\n        878,\n        14\n      ],\n      \"popularity\": 54.208,\n      \"release_date\": \"2015-12-15\",\n      \"video\": false,\n      \"vote_average\": 7.3,\n      \"vote_count\": 17946\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/jOzrELAzFxtMx2I4uDGHOotdfsS.jpg\",\n      \"id\": 181812,\n      \"title\": \"Star Wars: The Rise of Skywalker\",\n      \"original_language\": \"en\",\n      \"original_title\": \"Star Wars: The Rise of Skywalker\",\n      \"overview\": \"The surviving Resistance faces the First Order once again as the journey of Rey, Finn and Poe Dameron continues. With the power and knowledge of generations behind them, the final battle begins.\",\n      \"poster_path\": \"/db32LaOibwEliAmSL2jjDF6oDdj.jpg\",\n      \"media_type\": \"movie\",\n      \"genre_ids\": [\n        12,\n        28,\n        878\n      ],\n      \"popularity\": 57.195,\n      \"release_date\": \"2019-12-18\",\n      \"video\": false,\n      \"vote_average\": 6.389,\n      \"vote_count\": 8671\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/5Iw7zQTHVRBOYpA0V6z0yypOPZh.jpg\",\n      \"id\": 181808,\n      \"title\": \"Star Wars: The Last Jedi\",\n      \"original_language\": \"en\",\n      \"original_title\": \"Star Wars: The Last Jedi\",\n      \"overview\": \"Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order.\",\n      \"poster_path\": \"/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg\",\n      \"media_type\": \"movie\",\n      \"genre_ids\": [\n        12,\n        28,\n        878\n      ],\n      \"popularity\": 47.022,\n      \"release_date\": \"2017-12-13\",\n      \"video\": false,\n      \"vote_average\": 6.8,\n      \"vote_count\": 13924\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": null,\n      \"id\": 432134,\n      \"title\": \"Star Wars: Heroes & Villains\",\n      \"original_language\": \"en\",\n      \"original_title\": \"Star Wars: Heroes & Villains\",\n      \"overview\": \"A look at the creation and filming of the various heroes and villains from all six Star Wars movies, leading up to the release of Star Wars: Episode III - Revenge of the Sith.\",\n      \"poster_path\": \"/uPlEvzDy4lez92nEhUt3UFJOoQ6.jpg\",\n      \"media_type\": \"movie\",\n      \"genre_ids\": [\n        99\n      ],\n      \"popularity\": 2.851,\n      \"release_date\": \"2005-05-03\",\n      \"video\": false,\n      \"vote_average\": 9.438,\n      \"vote_count\": 8\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/ojHCeDULAkQK25700fhRU75Tur2.jpg\",\n      \"id\": 348350,\n      \"title\": \"Solo: A Star Wars Story\",\n      \"original_language\": \"en\",\n      \"original_title\": \"Solo: A Star Wars Story\",\n      \"overview\": \"Through a series of daring escapades deep within a dark and dangerous criminal underworld, Han Solo meets his mighty future copilot Chewbacca and encounters the notorious gambler Lando Calrissian.\",\n      \"poster_path\": \"/3IGbjc5ZC5yxim5W0sFING2kdcz.jpg\",\n      \"media_type\": \"movie\",\n      \"genre_ids\": [\n        878,\n        12,\n        28\n      ],\n      \"popularity\": 34.732,\n      \"release_date\": \"2018-05-15\",\n      \"video\": false,\n      \"vote_average\": 6.6,\n      \"vote_count\": 7651\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/6t8ES1d12OzWyCGxBeDYLHoaDrT.jpg\",\n      \"id\": 330459,\n      \"title\": \"Rogue One: A Star Wars Story\",\n      \"original_language\": \"en\",\n      \"original_title\": \"Rogue One: A Star Wars Story\",\n      \"overview\": \"A rogue band of resistance fighters unite for a mission to steal the Death Star plans and bring a new hope to the galaxy.\",\n      \"poster_path\": \"/i0yw1mFbB7sNGHCs7EXZPzFkdA1.jpg\",\n      \"media_type\": \"movie\",\n      \"genre_ids\": [\n        28,\n        12,\n        878\n      ],\n      \"popularity\": 34.32,\n      \"release_date\": \"2016-12-14\",\n      \"video\": false,\n      \"vote_average\": 7.5,\n      \"vote_count\": 13977\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/wDe8LzwuvHYYiuwyNfxdYQq8ti4.jpg\",\n      \"id\": 1893,\n      \"title\": \"Star Wars: Episode I - The Phantom Menace\",\n      \"original_language\": \"en\",\n      \"original_title\": \"Star Wars: Episode I - The Phantom Menace\",\n      \"overview\": \"Anakin Skywalker, a young slave strong with the Force, is discovered on Tatooine. Meanwhile, the evil Sith have returned, enacting their plot for revenge against the Jedi.\",\n      \"poster_path\": \"/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg\",\n      \"media_type\": \"movie\",\n      \"genre_ids\": [\n        12,\n        28,\n        878\n      ],\n      \"popularity\": 31.5,\n      \"release_date\": \"1999-05-19\",\n      \"video\": false,\n      \"vote_average\": 6.5,\n      \"vote_count\": 13124\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/dUkCHy02dtFWQwyCKQKlf1sRm0D.jpg\",\n      \"id\": 161704,\n      \"title\": \"Doraemon: Nobita's Little Star Wars\",\n      \"original_language\": \"ja\",\n      \"original_title\": \"映画ドラえもん のび太の宇宙小戦争\",\n      \"overview\": \"Papi, the tiny president of a faraway planet, escapes to Earth to avoid being captured by the military forces that took over. Despite being welcomed by Doraemon, Nobita and their friends, the little alien notices that his enemies have also reached this world and doesn't want to get his human friends involved in this war. Doraemon, Nobita, Gian, Suneo, and Shizuka start a big adventure as they try to hide and protect Papi.\",\n      \"poster_path\": \"/oLXqorJ3CtXkR90wCBkg4WnITL3.jpg\",\n      \"media_type\": \"movie\",\n      \"genre_ids\": [\n        16,\n        12,\n        10751,\n        14,\n        878\n      ],\n      \"popularity\": 9.276,\n      \"release_date\": \"1985-03-16\",\n      \"video\": false,\n      \"vote_average\": 7.444,\n      \"vote_count\": 18\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/dVTvzp1PEnvloYy7qzYCFeAkPQ3.jpg\",\n      \"id\": 203085,\n      \"name\": \"Star Wars: Tales of the Jedi\",\n      \"original_language\": \"en\",\n      \"original_name\": \"Star Wars: Tales of the Jedi\",\n      \"overview\": \"Journey into the lives of two distinctly different Jedi from the prequel era – Ahsoka Tano and Count Dooku. Each will be put to the test as they make choices that will define their destinies.\",\n      \"poster_path\": \"/9gshOJpjmZaUGM1En5wR1V1fcBE.jpg\",\n      \"media_type\": \"tv\",\n      \"genre_ids\": [\n        16,\n        10765\n      ],\n      \"popularity\": 35.917,\n      \"first_air_date\": \"2022-10-26\",\n      \"vote_average\": 8.102,\n      \"vote_count\": 172,\n      \"origin_country\": [\n        \"US\"\n      ]\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/dKH2l6WrrYS3tGp4JD3Y0AtVzPu.jpg\",\n      \"id\": 101978,\n      \"name\": \"Disney Gallery / Star Wars: The Mandalorian\",\n      \"original_language\": \"en\",\n      \"original_name\": \"Disney Gallery / Star Wars: The Mandalorian\",\n      \"overview\": \"Executive producer Jon Favreau invites the cast and crew of The Mandalorian to share an unprecedented look at the making of the series. Each chapter explores a different facet of the first live-action Star Wars television show through interviews, never-before-seen footage, and roundtable conversations hosted by Favreau himself.\",\n      \"poster_path\": \"/6Hc2eHp59iTyMqkhcumNovq2l6y.jpg\",\n      \"media_type\": \"tv\",\n      \"genre_ids\": [\n        99\n      ],\n      \"popularity\": 39.403,\n      \"first_air_date\": \"2020-05-04\",\n      \"vote_average\": 7.3,\n      \"vote_count\": 45,\n      \"origin_country\": [\n        \"US\"\n      ]\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/xEdnGUc8KeZ7h0eEgSN3ERhjgL0.jpg\",\n      \"id\": 12180,\n      \"title\": \"Star Wars: The Clone Wars\",\n      \"original_language\": \"en\",\n      \"original_title\": \"Star Wars: The Clone Wars\",\n      \"overview\": \"As the Clone Wars sweep through the galaxy, the heroic Jedi Knights struggle to maintain order and restore peace. More and more systems are falling prey to the forces of the dark side as the Galactic Republic slips further and further under the sway of the Separatists and their never-ending droid army. Anakin Skywalker and his Padawan learner Ahsoka Tano find themselves on a mission with far-reaching consequences, one that brings them face-to-face with crime lord Jabba the Hutt. But Count Dooku and his sinister agents, including the nefarious Asajj Ventress, will stop at nothing to ensure that Anakin and Ahsoka fail at their quest. Meanwhile, on the front lines of the Clone Wars, Obi-Wan Kenobi and Master Yoda lead the massive clone army in a valiant effort to resist the forces of the dark side...\",\n      \"poster_path\": \"/d6YOfi0T9GowglzIkDQGGvGYVTM.jpg\",\n      \"media_type\": \"movie\",\n      \"genre_ids\": [\n        16,\n        28,\n        878,\n        12\n      ],\n      \"popularity\": 17.361,\n      \"release_date\": \"2008-08-05\",\n      \"video\": false,\n      \"vote_average\": 6.113,\n      \"vote_count\": 1738\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/9eXNA3K010TlkUTLSzQ07cP6uPF.jpg\",\n      \"id\": 79093,\n      \"name\": \"Star Wars Resistance\",\n      \"original_language\": \"en\",\n      \"original_name\": \"Star Wars Resistance\",\n      \"overview\": \"Kazuda Xiono, a young pilot for the Resistance, is tasked with a top secret mission to investigate the First Order, a growing threat in the galaxy.\",\n      \"poster_path\": \"/xul6SG8rar3wkHPY8YusUtxcdlZ.jpg\",\n      \"media_type\": \"tv\",\n      \"genre_ids\": [\n        10765,\n        16,\n        10759\n      ],\n      \"popularity\": 20.486,\n      \"first_air_date\": \"2018-10-07\",\n      \"vote_average\": 6.417,\n      \"vote_count\": 96,\n      \"origin_country\": [\n        \"US\"\n      ]\n    },\n    {\n      \"adult\": false,\n      \"backdrop_path\": \"/eFaRU5y8wIwV0D14DPkbLaRUzOV.jpg\",\n      \"id\": 1895,\n      \"title\": \"Star Wars: Episode III - Revenge of the Sith\",\n      \"original_language\": \"en\",\n      \"original_title\": \"Star Wars: Episode III - Revenge of the Sith\",\n      \"overview\": \"The evil Darth Sidious enacts his final plan for unlimited power -- and the heroic Jedi Anakin Skywalker must choose a side.\",\n      \"poster_path\": \"/xfSAoBEm9MNBjmlNcDYLvLSMlnq.jpg\",\n      \"media_type\": \"movie\",\n      \"genre_ids\": [\n        12,\n        28,\n        878\n      ],\n      \"popularity\": 32.108,\n      \"release_date\": \"2005-05-17\",\n      \"video\": false,\n      \"vote_average\": 7.401,\n      \"vote_count\": 12350\n    }\n  ],\n  \"total_pages\": 11,\n  \"total_results\": 201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0eedc34d-42b4-4b0d-96a1-a2fcc4fc1138",
+          "name": "Person",
+          "request": {
+            "name": "Person",
+            "description": {
+              "content": "Search for people by their name and also known as names.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "search",
+                "person"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "include_adult",
+                  "value": "false"
+                },
+                {
+                  "disabled": false,
+                  "key": "language",
+                  "value": "en-US"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ded401c8-0212-4690-9157-5d4da60134a8",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "search",
+                    "person"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include_adult",
+                      "value": "false"
+                    },
+                    {
+                      "key": "language",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"page\\\":1,\\\"results\\\":[{\\\"adult\\\":false,\\\"gender\\\":2,\\\"id\\\":31,\\\"known_for_department\\\":\\\"Acting\\\",\\\"name\\\":\\\"Tom Hanks\\\",\\\"original_name\\\":\\\"Tom Hanks\\\",\\\"popularity\\\":84.631,\\\"profile_path\\\":\\\"/xndWFsBlClOJFRdhSt4NBwiPq2o.jpg\\\",\\\"known_for\\\":[{\\\"adult\\\":false,\\\"backdrop_path\\\":\\\"/3h1JZGDhZ8nzxdgvkxha0qBqi05.jpg\\\",\\\"id\\\":13,\\\"title\\\":\\\"Forrest Gump\\\",\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Forrest Gump\\\",\\\"overview\\\":\\\"A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.\\\",\\\"poster_path\\\":\\\"/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg\\\",\\\"media_type\\\":\\\"movie\\\",\\\"genre_ids\\\":[35,18,10749],\\\"popularity\\\":67.209,\\\"release_date\\\":\\\"1994-06-23\\\",\\\"video\\\":false,\\\"vote_average\\\":8.481,\\\"vote_count\\\":24525},{\\\"adult\\\":false,\\\"backdrop_path\\\":\\\"/3Rfvhy1Nl6sSGJwyjb0QiZzZYlB.jpg\\\",\\\"id\\\":862,\\\"title\\\":\\\"Toy Story\\\",\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"Toy Story\\\",\\\"overview\\\":\\\"Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.\\\",\\\"poster_path\\\":\\\"/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg\\\",\\\"media_type\\\":\\\"movie\\\",\\\"genre_ids\\\":[16,12,10751,35],\\\"popularity\\\":119.802,\\\"release_date\\\":\\\"1995-10-30\\\",\\\"video\\\":false,\\\"vote_average\\\":7.969,\\\"vote_count\\\":16613},{\\\"adult\\\":false,\\\"backdrop_path\\\":\\\"/vxJ08SvwomfKbpboCWynC3uqUg4.jpg\\\",\\\"id\\\":497,\\\"title\\\":\\\"The Green Mile\\\",\\\"original_language\\\":\\\"en\\\",\\\"original_title\\\":\\\"The Green Mile\\\",\\\"overview\\\":\\\"A supernatural tale set on death row in a Southern prison, where gentle giant John Coffey possesses the mysterious power to heal people's ailments. When the cell block's head guard, Paul Edgecomb, recognizes Coffey's miraculous gift, he tries desperately to help stave off the condemned man's execution.\\\",\\\"poster_path\\\":\\\"/o0lO84GI7qrG6XFvtsPOSV7CTNa.jpg\\\",\\\"media_type\\\":\\\"movie\\\",\\\"genre_ids\\\":[14,18,80],\\\"popularity\\\":77.553,\\\"release_date\\\":\\\"1999-12-10\\\",\\\"video\\\":false,\\\"vote_average\\\":8.507,\\\"vote_count\\\":15310}]}],\\\"total_pages\\\":1,\\\"total_results\\\":1}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1aa15b67-4249-4104-b26e-6005cf6fbe99",
+          "name": "TV",
+          "request": {
+            "name": "TV",
+            "description": {
+              "content": "Search for TV shows by their original, translated and also known as names.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "search",
+                "tv"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "first_air_date_year",
+                  "value": "<integer>",
+                  "description": "Search only the first air date. Valid values are: 1000..9999"
+                },
+                {
+                  "disabled": false,
+                  "key": "include_adult",
+                  "value": "false"
+                },
+                {
+                  "disabled": false,
+                  "key": "language",
+                  "value": "en-US"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "year",
+                  "value": "<integer>",
+                  "description": "Search the first air date and all episode air dates. Valid values are: 1000..9999"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0322c1c7-d3f3-4329-9efc-b9699b565f09",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "search",
+                    "tv"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "first_air_date_year",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "include_adult",
+                      "value": "false"
+                    },
+                    {
+                      "key": "language",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "year",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"page\\\":1,\\\"results\\\":[{\\\"adult\\\":false,\\\"backdrop_path\\\":\\\"/bsNm9z2TJfe0WO3RedPGWQ8mG1X.jpg\\\",\\\"genre_ids\\\":[18,80],\\\"id\\\":1396,\\\"origin_country\\\":[\\\"US\\\"],\\\"original_language\\\":\\\"en\\\",\\\"original_name\\\":\\\"Breaking Bad\\\",\\\"overview\\\":\\\"When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.\\\",\\\"popularity\\\":298.884,\\\"poster_path\\\":\\\"/ggFHVNu6YYI5L9pCfOacjizRGt.jpg\\\",\\\"first_air_date\\\":\\\"2008-01-20\\\",\\\"name\\\":\\\"Breaking Bad\\\",\\\"vote_average\\\":8.879,\\\"vote_count\\\":11536}],\\\"total_pages\\\":1,\\\"total_results\\\":1}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.themoviedb.org",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "75ee9fa6-2c1c-4424-9e19-0ca20c7073dd",
+    "name": "tmdb-api Account Search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

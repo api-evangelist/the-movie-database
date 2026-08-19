@@ -1,0 +1,96 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "tmdb-api Account Collection API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Collection",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/collection/:collection_id",
+            "params": [
+              {
+                "name": "collection_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get collection details by ID."
+        },
+        {
+          "info": {
+            "name": "Images",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/collection/:collection_id/images",
+            "params": [
+              {
+                "name": "collection_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include_image_language",
+                "value": "",
+                "type": "query",
+                "description": "specify a comma separated list of ISO-639-1 values to query, for example: `en-US,null`"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the images that belong to a collection."
+        },
+        {
+          "info": {
+            "name": "Translations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/collection/:collection_id/translations",
+            "params": [
+              {
+                "name": "collection_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Translations"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

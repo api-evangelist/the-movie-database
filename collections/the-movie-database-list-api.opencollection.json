@@ -1,0 +1,209 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "tmdb-api Account List API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Add Movie",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.themoviedb.org/3/list/:list_id/add_item",
+            "params": [
+              {
+                "name": "list_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add a movie to a list."
+        },
+        {
+          "info": {
+            "name": "Check Item Status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/list/:list_id/item_status",
+            "params": [
+              {
+                "name": "list_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Use this method to check if an item has already been added to the list."
+        },
+        {
+          "info": {
+            "name": "Clear",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.themoviedb.org/3/list/:list_id/clear",
+            "params": [
+              {
+                "name": "list_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "confirm",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Clear all items from a list."
+        },
+        {
+          "info": {
+            "name": "Create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.themoviedb.org/3/list",
+            "params": [
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create"
+        },
+        {
+          "info": {
+            "name": "Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/list/:list_id",
+            "params": [
+              {
+                "name": "list_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Details"
+        },
+        {
+          "info": {
+            "name": "Delete",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.themoviedb.org/3/list/:list_id",
+            "params": [
+              {
+                "name": "list_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Delete a list."
+        },
+        {
+          "info": {
+            "name": "Remove Movie",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.themoviedb.org/3/list/:list_id/remove_item",
+            "params": [
+              {
+                "name": "list_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Remove a movie from a list."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

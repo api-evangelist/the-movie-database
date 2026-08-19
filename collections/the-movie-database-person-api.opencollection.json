@@ -1,0 +1,296 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "tmdb-api Account Person API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Person",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "People List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/person/changes",
+            "params": [
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "People List"
+        },
+        {
+          "info": {
+            "name": "Popular",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/person/popular",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get a list of people ordered by popularity."
+        },
+        {
+          "info": {
+            "name": "Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/person/:person_id",
+            "params": [
+              {
+                "name": "person_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "append_to_response",
+                "value": "",
+                "type": "query",
+                "description": "comma separated list of endpoints within this namespace, 20 items max"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Query the top level details of a person."
+        },
+        {
+          "info": {
+            "name": "Changes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/person/:person_id/changes",
+            "params": [
+              {
+                "name": "person_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the recent changes for a person."
+        },
+        {
+          "info": {
+            "name": "Combined Credits",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/person/:person_id/combined_credits",
+            "params": [
+              {
+                "name": "person_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the combined movie and TV credits that belong to a person."
+        },
+        {
+          "info": {
+            "name": "External IDs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/person/:person_id/external_ids",
+            "params": [
+              {
+                "name": "person_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the external ID's that belong to a person."
+        },
+        {
+          "info": {
+            "name": "Images",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/person/:person_id/images",
+            "params": [
+              {
+                "name": "person_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the profile images that belong to a person."
+        },
+        {
+          "info": {
+            "name": "Latest",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/person/latest"
+          },
+          "docs": "Get the newest created person. This is a live response and will continuously change."
+        },
+        {
+          "info": {
+            "name": "Movie Credits",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/person/:person_id/movie_credits",
+            "params": [
+              {
+                "name": "person_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the movie credits for a person."
+        },
+        {
+          "info": {
+            "name": "TV Credits",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/person/:person_id/tv_credits",
+            "params": [
+              {
+                "name": "person_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the TV credits that belong to a person."
+        },
+        {
+          "info": {
+            "name": "Tagged Images",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/person/:person_id/tagged_images",
+            "params": [
+              {
+                "name": "person_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the tagged images for a person."
+        },
+        {
+          "info": {
+            "name": "Translations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/person/:person_id/translations",
+            "params": [
+              {
+                "name": "person_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the translations that belong to a person."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

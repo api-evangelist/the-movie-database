@@ -1,0 +1,119 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "tmdb-api Account Authentication API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Authentication",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Validate Key",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/authentication"
+          },
+          "docs": "Test your API Key to see if it's valid."
+        },
+        {
+          "info": {
+            "name": "Create Guest Session",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/authentication/guest_session/new"
+          },
+          "docs": "Create Guest Session"
+        },
+        {
+          "info": {
+            "name": "Create Request Token",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/authentication/token/new"
+          },
+          "docs": "Create Request Token"
+        },
+        {
+          "info": {
+            "name": "Create Session",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.themoviedb.org/3/authentication/session/new",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Session"
+        },
+        {
+          "info": {
+            "name": "Create Session (from v4 token)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.themoviedb.org/3/authentication/session/convert/4",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Session (from v4 token)"
+        },
+        {
+          "info": {
+            "name": "Create Session (with login)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.themoviedb.org/3/authentication/token/validate_with_login",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "This method allows an application to validate a request token by entering a username and password."
+        },
+        {
+          "info": {
+            "name": "Delete Session",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.themoviedb.org/3/authentication/session",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete Session"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

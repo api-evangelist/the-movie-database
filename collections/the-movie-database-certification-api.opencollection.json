@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "tmdb-api Account Certification API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Certification",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Movie Certifications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/certification/movie/list"
+          },
+          "docs": "Get an up to date list of the officially supported movie certifications on TMDB."
+        },
+        {
+          "info": {
+            "name": "TV Certifications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/certification/tv/list"
+          },
+          "docs": "TV Certifications"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

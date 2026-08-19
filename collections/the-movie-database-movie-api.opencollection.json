@@ -1,0 +1,644 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "tmdb-api Account Movie API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Movie",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Movie List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/changes",
+            "params": [
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get a list of all of the movie ids that have been changed in the past 24 hours."
+        },
+        {
+          "info": {
+            "name": "Now Playing",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/now_playing",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "region",
+                "value": "",
+                "type": "query",
+                "description": "ISO-3166-1 code"
+              }
+            ]
+          },
+          "docs": "Get a list of movies that are currently in theatres."
+        },
+        {
+          "info": {
+            "name": "Popular",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/popular",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "region",
+                "value": "",
+                "type": "query",
+                "description": "ISO-3166-1 code"
+              }
+            ]
+          },
+          "docs": "Get a list of movies ordered by popularity."
+        },
+        {
+          "info": {
+            "name": "Top Rated",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/top_rated",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "region",
+                "value": "",
+                "type": "query",
+                "description": "ISO-3166-1 code"
+              }
+            ]
+          },
+          "docs": "Get a list of movies ordered by rating."
+        },
+        {
+          "info": {
+            "name": "Upcoming",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/upcoming",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "region",
+                "value": "",
+                "type": "query",
+                "description": "ISO-3166-1 code"
+              }
+            ]
+          },
+          "docs": "Get a list of movies that are being released soon."
+        },
+        {
+          "info": {
+            "name": "Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "append_to_response",
+                "value": "",
+                "type": "query",
+                "description": "comma separated list of endpoints within this namespace, 20 items max"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the top level details of a movie by ID."
+        },
+        {
+          "info": {
+            "name": "Account States",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/account_states",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "guest_session_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the rating, watchlist and favourite status of an account."
+        },
+        {
+          "info": {
+            "name": "Alternative Titles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/alternative_titles",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query",
+                "description": "specify a ISO-3166-1 value to filter the results"
+              }
+            ]
+          },
+          "docs": "Get the alternative titles for a movie."
+        },
+        {
+          "info": {
+            "name": "Changes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/changes",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the recent changes for a movie."
+        },
+        {
+          "info": {
+            "name": "Credits",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/credits",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Credits"
+        },
+        {
+          "info": {
+            "name": "External IDs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/external_ids",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "External IDs"
+        },
+        {
+          "info": {
+            "name": "Images",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/images",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include_image_language",
+                "value": "",
+                "type": "query",
+                "description": "specify a comma separated list of ISO-639-1 values to query, for example: `en-US,null`"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the images that belong to a movie."
+        },
+        {
+          "info": {
+            "name": "Keywords",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/keywords",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Keywords"
+        },
+        {
+          "info": {
+            "name": "Latest",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/latest"
+          },
+          "docs": "Get the newest movie ID."
+        },
+        {
+          "info": {
+            "name": "Lists",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/lists",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the lists that a movie has been added to."
+        },
+        {
+          "info": {
+            "name": "Recommendations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/recommendations",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Recommendations"
+        },
+        {
+          "info": {
+            "name": "Release Dates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/release_dates",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the release dates and certifications for a movie."
+        },
+        {
+          "info": {
+            "name": "Reviews",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/reviews",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the user reviews for a movie."
+        },
+        {
+          "info": {
+            "name": "Similar",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/similar",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the similar movies based on genres and keywords."
+        },
+        {
+          "info": {
+            "name": "Translations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/translations",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the translations for a movie."
+        },
+        {
+          "info": {
+            "name": "Videos",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/videos",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Videos"
+        },
+        {
+          "info": {
+            "name": "Watch Providers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/watch/providers",
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the list of streaming providers we have for a movie."
+        },
+        {
+          "info": {
+            "name": "Add Rating",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/rating",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "guest_session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Rate a movie and save it to your rated list."
+        },
+        {
+          "info": {
+            "name": "Delete Rating",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.themoviedb.org/3/movie/:movie_id/rating",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "movie_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "guest_session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Delete a user rating."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

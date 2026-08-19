@@ -1,0 +1,90 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "tmdb-api Account Watch API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Watch",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Available Regions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/watch/providers/regions",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the list of the countries we have watch provider (OTT/streaming) data for."
+        },
+        {
+          "info": {
+            "name": "Movie Providers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/watch/providers/movie",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "watch_region",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the list of streaming providers we have for movies."
+        },
+        {
+          "info": {
+            "name": "TV Providers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/watch/providers/tv",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "watch_region",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the list of streaming providers we have for TV shows."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

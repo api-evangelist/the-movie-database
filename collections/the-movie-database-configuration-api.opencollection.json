@@ -1,0 +1,99 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "tmdb-api Account Configuration API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Configuration",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/configuration"
+          },
+          "docs": "Query the API configuration details."
+        },
+        {
+          "info": {
+            "name": "Countries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/configuration/countries",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the list of countries (ISO 3166-1 tags) used throughout TMDB."
+        },
+        {
+          "info": {
+            "name": "Jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/configuration/jobs"
+          },
+          "docs": "Get the list of the jobs and departments we use on TMDB."
+        },
+        {
+          "info": {
+            "name": "Languages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/configuration/languages"
+          },
+          "docs": "Get the list of languages (ISO 639-1 tags) used throughout TMDB."
+        },
+        {
+          "info": {
+            "name": "Primary Translations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/configuration/primary_translations"
+          },
+          "docs": "Get a list of the officially supported translations on TMDB."
+        },
+        {
+          "info": {
+            "name": "Timezones",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/configuration/timezones"
+          },
+          "docs": "Get the list of timezones used throughout TMDB."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

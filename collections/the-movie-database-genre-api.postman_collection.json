@@ -1,0 +1,239 @@
+{
+  "item": [
+    {
+      "id": "5d24d6d0-5b2a-4a08-bb70-f162dbb6be44",
+      "name": "Genre",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7333563c-ff0b-4ba7-868d-53213093597b",
+          "name": "Movie List",
+          "request": {
+            "name": "Movie List",
+            "description": {
+              "content": "Get the list of official genres for movies.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "genre",
+                "movie",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "language",
+                  "value": "en"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7409def8-4032-4b54-855c-9204afa81449",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "genre",
+                    "movie",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "language",
+                      "value": "en"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"genres\\\":[{\\\"id\\\":28,\\\"name\\\":\\\"Action\\\"},{\\\"id\\\":12,\\\"name\\\":\\\"Abenteuer\\\"},{\\\"id\\\":16,\\\"name\\\":\\\"Animation\\\"},{\\\"id\\\":35,\\\"name\\\":\\\"Komödie\\\"},{\\\"id\\\":80,\\\"name\\\":\\\"Krimi\\\"},{\\\"id\\\":99,\\\"name\\\":\\\"Dokumentarfilm\\\"},{\\\"id\\\":18,\\\"name\\\":\\\"Drama\\\"},{\\\"id\\\":10751,\\\"name\\\":\\\"Familie\\\"},{\\\"id\\\":14,\\\"name\\\":\\\"Fantasy\\\"},{\\\"id\\\":36,\\\"name\\\":\\\"Historie\\\"},{\\\"id\\\":27,\\\"name\\\":\\\"Horror\\\"},{\\\"id\\\":10402,\\\"name\\\":\\\"Musik\\\"},{\\\"id\\\":9648,\\\"name\\\":\\\"Mystery\\\"},{\\\"id\\\":10749,\\\"name\\\":\\\"Liebesfilm\\\"},{\\\"id\\\":878,\\\"name\\\":\\\"Science Fiction\\\"},{\\\"id\\\":10770,\\\"name\\\":\\\"TV-Film\\\"},{\\\"id\\\":53,\\\"name\\\":\\\"Thriller\\\"},{\\\"id\\\":10752,\\\"name\\\":\\\"Kriegsfilm\\\"},{\\\"id\\\":37,\\\"name\\\":\\\"Western\\\"}]}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0650b7cb-12d1-489d-ad25-86a8531e7a9f",
+          "name": "TV List",
+          "request": {
+            "name": "TV List",
+            "description": {
+              "content": "Get the list of official genres for TV shows.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "genre",
+                "tv",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "language",
+                  "value": "en"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1352983c-e65a-4cc5-9051-10532516d6e6",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "genre",
+                    "tv",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "language",
+                      "value": "en"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"genres\\\":[{\\\"id\\\":10759,\\\"name\\\":\\\"Action & Adventure\\\"},{\\\"id\\\":16,\\\"name\\\":\\\"Animation\\\"},{\\\"id\\\":35,\\\"name\\\":\\\"Komödie\\\"},{\\\"id\\\":80,\\\"name\\\":\\\"Krimi\\\"},{\\\"id\\\":99,\\\"name\\\":\\\"Dokumentarfilm\\\"},{\\\"id\\\":18,\\\"name\\\":\\\"Drama\\\"},{\\\"id\\\":10751,\\\"name\\\":\\\"Familie\\\"},{\\\"id\\\":10762,\\\"name\\\":\\\"Kids\\\"},{\\\"id\\\":9648,\\\"name\\\":\\\"Mystery\\\"},{\\\"id\\\":10763,\\\"name\\\":\\\"News\\\"},{\\\"id\\\":10764,\\\"name\\\":\\\"Reality\\\"},{\\\"id\\\":10765,\\\"name\\\":\\\"Sci-Fi & Fantasy\\\"},{\\\"id\\\":10766,\\\"name\\\":\\\"Soap\\\"},{\\\"id\\\":10767,\\\"name\\\":\\\"Talk\\\"},{\\\"id\\\":10768,\\\"name\\\":\\\"War & Politics\\\"},{\\\"id\\\":37,\\\"name\\\":\\\"Western\\\"}]}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.themoviedb.org",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "51ca46fa-d4ca-4074-a962-40d83984d4be",
+    "name": "tmdb-api Account Genre API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

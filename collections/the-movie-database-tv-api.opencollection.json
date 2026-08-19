@@ -1,0 +1,1359 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "tmdb-api Account Tv API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tv",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "TV List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/changes",
+            "params": [
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "TV List"
+        },
+        {
+          "info": {
+            "name": "Airing Today",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/airing_today",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timezone",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get a list of TV shows airing today."
+        },
+        {
+          "info": {
+            "name": "On The Air",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/on_the_air",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timezone",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get a list of TV shows that air in the next 7 days."
+        },
+        {
+          "info": {
+            "name": "Popular",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/popular",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get a list of TV shows ordered by popularity."
+        },
+        {
+          "info": {
+            "name": "Top Rated",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/top_rated",
+            "params": [
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get a list of TV shows ordered by rating."
+        },
+        {
+          "info": {
+            "name": "Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "append_to_response",
+                "value": "",
+                "type": "query",
+                "description": "comma separated list of endpoints within this namespace, 20 items max"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the details of a TV show."
+        },
+        {
+          "info": {
+            "name": "Account States",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/account_states",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "guest_session_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the rating, watchlist and favourite status."
+        },
+        {
+          "info": {
+            "name": "Aggregate Credits",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/aggregate_credits",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the aggregate credits (cast and crew) that have been added to a TV show."
+        },
+        {
+          "info": {
+            "name": "Alternative Titles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/alternative_titles",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the alternative titles that have been added to a TV show."
+        },
+        {
+          "info": {
+            "name": "Changes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/changes",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the recent changes for a TV show."
+        },
+        {
+          "info": {
+            "name": "Content Ratings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/content_ratings",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the content ratings that have been added to a TV show."
+        },
+        {
+          "info": {
+            "name": "Credits",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/credits",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the latest season credits of a TV show."
+        },
+        {
+          "info": {
+            "name": "Episode Groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/episode_groups",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the episode groups that have been added to a TV show."
+        },
+        {
+          "info": {
+            "name": "External IDs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/external_ids",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a list of external IDs that have been added to a TV show."
+        },
+        {
+          "info": {
+            "name": "Images",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/images",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include_image_language",
+                "value": "",
+                "type": "query",
+                "description": "specify a comma separated list of ISO-639-1 values to query, for example: `en-US,null`"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the images that belong to a TV series."
+        },
+        {
+          "info": {
+            "name": "Keywords",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/keywords",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a list of keywords that have been added to a TV show."
+        },
+        {
+          "info": {
+            "name": "Latest",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/latest"
+          },
+          "docs": "Get the newest TV show ID."
+        },
+        {
+          "info": {
+            "name": "Lists",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/lists",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the lists that a TV series has been added to."
+        },
+        {
+          "info": {
+            "name": "Recommendations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/recommendations",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Recommendations"
+        },
+        {
+          "info": {
+            "name": "Reviews",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/reviews",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the reviews that have been added to a TV show."
+        },
+        {
+          "info": {
+            "name": "Screened Theatrically",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/screened_theatrically",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the seasons and episodes that have screened theatrically."
+        },
+        {
+          "info": {
+            "name": "Similar",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/similar",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the similar TV shows."
+        },
+        {
+          "info": {
+            "name": "Translations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/translations",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the translations that have been added to a TV show."
+        },
+        {
+          "info": {
+            "name": "Videos",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/videos",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include_video_language",
+                "value": "",
+                "type": "query",
+                "description": "filter the list results by language, supports more than one value by using a comma"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the videos that belong to a TV show."
+        },
+        {
+          "info": {
+            "name": "Watch Providers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/watch/providers",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the list of streaming providers we have for a TV show."
+        },
+        {
+          "info": {
+            "name": "Add Rating",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/rating",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "guest_session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Rate a TV show and save it to your rated list."
+        },
+        {
+          "info": {
+            "name": "Delete Rating",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/rating",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "guest_session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Delete Rating"
+        },
+        {
+          "info": {
+            "name": "Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "append_to_response",
+                "value": "",
+                "type": "query",
+                "description": "comma separated list of endpoints within this namespace, 20 items max"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Query the details of a TV season."
+        },
+        {
+          "info": {
+            "name": "Account States",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/account_states",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "guest_session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the rating, watchlist and favourite status."
+        },
+        {
+          "info": {
+            "name": "Aggregate Credits",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/aggregate_credits",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the aggregate credits (cast and crew) that have been added to a TV season."
+        },
+        {
+          "info": {
+            "name": "Changes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/season/:season_id/changes",
+            "params": [
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the recent changes for a TV season."
+        },
+        {
+          "info": {
+            "name": "Credits",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/credits",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Credits"
+        },
+        {
+          "info": {
+            "name": "External IDs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/external_ids",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a list of external IDs that have been added to a TV season."
+        },
+        {
+          "info": {
+            "name": "Images",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/images",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include_image_language",
+                "value": "",
+                "type": "query",
+                "description": "specify a comma separated list of ISO-639-1 values to query, for example: `en-US,null`"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the images that belong to a TV season."
+        },
+        {
+          "info": {
+            "name": "Translations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/translations",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the translations for a TV season."
+        },
+        {
+          "info": {
+            "name": "Videos",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/videos",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include_video_language",
+                "value": "",
+                "type": "query",
+                "description": "filter the list results by language, supports more than one value by using a comma"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the videos that belong to a TV season."
+        },
+        {
+          "info": {
+            "name": "Watch Providers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/watch/providers",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the list of streaming providers we have for a TV season."
+        },
+        {
+          "info": {
+            "name": "Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/episode/:episode_number",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "episode_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "append_to_response",
+                "value": "",
+                "type": "query",
+                "description": "comma separated list of endpoints within this namespace, 20 items max"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Query the details of a TV episode."
+        },
+        {
+          "info": {
+            "name": "Account States",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/episode/:episode_number/account_states",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "episode_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "guest_session_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the rating, watchlist and favourite status."
+        },
+        {
+          "info": {
+            "name": "Changes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/episode/:episode_id/changes",
+            "params": [
+              {
+                "name": "episode_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the recent changes for a TV episode."
+        },
+        {
+          "info": {
+            "name": "Credits",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/episode/:episode_number/credits",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "episode_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Credits"
+        },
+        {
+          "info": {
+            "name": "External IDs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/episode/:episode_number/external_ids",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "episode_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a list of external IDs that have been added to a TV episode."
+        },
+        {
+          "info": {
+            "name": "Images",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/episode/:episode_number/images",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include_image_language",
+                "value": "",
+                "type": "query",
+                "description": "specify a comma separated list of ISO-639-1 values to query, for example: `en-US,null`"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "episode_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the images that belong to a TV episode."
+        },
+        {
+          "info": {
+            "name": "Translations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/episode/:episode_number/translations",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "episode_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the translations that have been added to a TV episode."
+        },
+        {
+          "info": {
+            "name": "Videos",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/episode/:episode_number/videos",
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include_video_language",
+                "value": "",
+                "type": "query",
+                "description": "filter the list results by language, supports more than one value by using a comma"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "episode_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the videos that belong to a TV episode."
+        },
+        {
+          "info": {
+            "name": "Add Rating",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/episode/:episode_number/rating",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "guest_session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "episode_number",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Rate a TV episode and save it to your rated list."
+        },
+        {
+          "info": {
+            "name": "Delete Rating",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.themoviedb.org/3/tv/:series_id/season/:season_number/episode/:episode_number/rating",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "guest_session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "session_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "episode_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete your rating on a TV episode."
+        },
+        {
+          "info": {
+            "name": "Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/tv/episode_group/:tv_episode_group_id",
+            "params": [
+              {
+                "name": "tv_episode_group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the details of a TV episode group."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

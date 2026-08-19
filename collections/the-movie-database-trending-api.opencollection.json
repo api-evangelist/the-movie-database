@@ -1,0 +1,122 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "tmdb-api Account Trending API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Trending",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "All",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/trending/all/:time_window",
+            "params": [
+              {
+                "name": "time_window",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query",
+                "description": "`ISO-639-1`-`ISO-3166-1` code"
+              }
+            ]
+          },
+          "docs": "Get the trending movies, TV shows and people."
+        },
+        {
+          "info": {
+            "name": "Movies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/trending/movie/:time_window",
+            "params": [
+              {
+                "name": "time_window",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query",
+                "description": "`ISO-639-1`-`ISO-3166-1` code"
+              }
+            ]
+          },
+          "docs": "Get the trending movies on TMDB."
+        },
+        {
+          "info": {
+            "name": "People",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/trending/person/:time_window",
+            "params": [
+              {
+                "name": "time_window",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query",
+                "description": "`ISO-639-1`-`ISO-3166-1` code"
+              }
+            ]
+          },
+          "docs": "Get the trending people on TMDB."
+        },
+        {
+          "info": {
+            "name": "TV",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/trending/tv/:time_window",
+            "params": [
+              {
+                "name": "time_window",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query",
+                "description": "`ISO-639-1`-`ISO-3166-1` code"
+              }
+            ]
+          },
+          "docs": "Get the trending TV shows on TMDB."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

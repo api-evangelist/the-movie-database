@@ -1,0 +1,429 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "tmdb-api Account Discover API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Discover",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Movie",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/discover/movie",
+            "params": [
+              {
+                "name": "certification",
+                "value": "",
+                "type": "query",
+                "description": "use in conjunction with `region`"
+              },
+              {
+                "name": "certification.gte",
+                "value": "",
+                "type": "query",
+                "description": "use in conjunction with `region`"
+              },
+              {
+                "name": "certification.lte",
+                "value": "",
+                "type": "query",
+                "description": "use in conjunction with `region`"
+              },
+              {
+                "name": "certification_country",
+                "value": "",
+                "type": "query",
+                "description": "use in conjunction with the `certification`, `certification.gte` and `certification.lte` filters"
+              },
+              {
+                "name": "include_adult",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "include_video",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "primary_release_year",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "primary_release_date.gte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "primary_release_date.lte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "region",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "release_date.gte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "release_date.lte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort_by",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vote_average.gte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vote_average.lte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vote_count.gte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vote_count.lte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "watch_region",
+                "value": "",
+                "type": "query",
+                "description": "use in conjunction with `with_watch_monetization_types ` or `with_watch_providers `"
+              },
+              {
+                "name": "with_cast",
+                "value": "",
+                "type": "query",
+                "description": "can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "with_companies",
+                "value": "",
+                "type": "query",
+                "description": "can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "with_crew",
+                "value": "",
+                "type": "query",
+                "description": "can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "with_genres",
+                "value": "",
+                "type": "query",
+                "description": "can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "with_keywords",
+                "value": "",
+                "type": "query",
+                "description": "can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "with_origin_country",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "with_original_language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "with_people",
+                "value": "",
+                "type": "query",
+                "description": "can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "with_release_type",
+                "value": "",
+                "type": "query",
+                "description": "possible values are: [1, 2, 3, 4, 5, 6] can be a comma (`AND`) or pipe (`OR`) separated query, can be used in conjunction with `region`"
+              },
+              {
+                "name": "with_runtime.gte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "with_runtime.lte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "with_watch_monetization_types",
+                "value": "",
+                "type": "query",
+                "description": "possible values are: [flatrate, free, ads, rent, buy] use in conjunction with `watch_region`, can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "with_watch_providers",
+                "value": "",
+                "type": "query",
+                "description": "use in conjunction with `watch_region`, can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "without_companies",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "without_genres",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "without_keywords",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "without_watch_providers",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "year",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Find movies using over 30 filters and sort options."
+        },
+        {
+          "info": {
+            "name": "TV",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.themoviedb.org/3/discover/tv",
+            "params": [
+              {
+                "name": "air_date.gte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "air_date.lte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "first_air_date_year",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "first_air_date.gte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "first_air_date.lte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "include_adult",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "include_null_first_air_dates",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "screened_theatrically",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort_by",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timezone",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vote_average.gte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vote_average.lte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vote_count.gte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vote_count.lte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "watch_region",
+                "value": "",
+                "type": "query",
+                "description": "use in conjunction with `with_watch_monetization_types ` or `with_watch_providers `"
+              },
+              {
+                "name": "with_companies",
+                "value": "",
+                "type": "query",
+                "description": "can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "with_genres",
+                "value": "",
+                "type": "query",
+                "description": "can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "with_keywords",
+                "value": "",
+                "type": "query",
+                "description": "can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "with_networks",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "with_origin_country",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "with_original_language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "with_runtime.gte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "with_runtime.lte",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "with_status",
+                "value": "",
+                "type": "query",
+                "description": "possible values are: [0, 1, 2, 3, 4, 5], can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "with_watch_monetization_types",
+                "value": "",
+                "type": "query",
+                "description": "possible values are: [flatrate, free, ads, rent, buy] use in conjunction with `watch_region`, can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "with_watch_providers",
+                "value": "",
+                "type": "query",
+                "description": "use in conjunction with `watch_region`, can be a comma (`AND`) or pipe (`OR`) separated query"
+              },
+              {
+                "name": "without_companies",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "without_genres",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "without_keywords",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "without_watch_providers",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "with_type",
+                "value": "",
+                "type": "query",
+                "description": "possible values are: [0, 1, 2, 3, 4, 5, 6], can be a comma (`AND`) or pipe (`OR`) separated query"
+              }
+            ]
+          },
+          "docs": "Find TV shows using over 30 filters and sort options."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

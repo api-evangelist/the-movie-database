@@ -1,0 +1,347 @@
+{
+  "item": [
+    {
+      "id": "4d8e4c19-e39b-4ebb-a948-3535b308da81",
+      "name": "Company",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e16c1f1d-d3a2-466d-bcbf-f920f9147443",
+          "name": "Details",
+          "request": {
+            "name": "Details",
+            "description": {
+              "content": "Get the company details by ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "company",
+                ":company_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "company_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f055aa1d-42a2-492b-b039-24f8ee50c767",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "company",
+                    ":company_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "company_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"description\\\":\\\"\\\",\\\"headquarters\\\":\\\"San Francisco, California\\\",\\\"homepage\\\":\\\"https://www.lucasfilm.com\\\",\\\"id\\\":1,\\\"logo_path\\\":\\\"/o86DbpburjxrqAzEDhXZcyE8pDb.png\\\",\\\"name\\\":\\\"Lucasfilm Ltd.\\\",\\\"origin_country\\\":\\\"US\\\",\\\"parent_company\\\":null}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f53ddf3f-b815-4c65-aac6-a3b1163c6e37",
+          "name": "Alternative Names",
+          "request": {
+            "name": "Alternative Names",
+            "description": {
+              "content": "Get the company details by ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "company",
+                ":company_id",
+                "alternative_names"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "company_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6d29ce6c-ca34-4ac0-b5d1-826821722e77",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "company",
+                    ":company_id",
+                    "alternative_names"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "company_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"id\\\":1,\\\"results\\\":[{\\\"name\\\":\\\"루카스필름\\\",\\\"type\\\":\\\"\\\"},{\\\"name\\\":\\\"Lucasfilm Limited, LLC\\\",\\\"type\\\":\\\"\\\"},{\\\"name\\\":\\\"Lucasfilm Ltd. LLC\\\",\\\"type\\\":\\\"\\\"},{\\\"name\\\":\\\"Lucasfilm\\\",\\\"type\\\":\\\"\\\"}]}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cded9dcf-36cf-420d-aaed-315586aaedf6",
+          "name": "Images",
+          "request": {
+            "name": "Images",
+            "description": {
+              "content": "Get the company logos by id.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "3",
+                "company",
+                ":company_id",
+                "images"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "company_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2028c8a5-c3e3-4698-a8eb-baf6454f6873",
+              "name": "200",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "3",
+                    "company",
+                    ":company_id",
+                    "images"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "company_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"{\\\"id\\\":1,\\\"logos\\\":[{\\\"aspect_ratio\\\":2.97979797979798,\\\"file_path\\\":\\\"/o86DbpburjxrqAzEDhXZcyE8pDb.png\\\",\\\"height\\\":99,\\\"id\\\":\\\"5aa080d6c3a3683fea00011e\\\",\\\"file_type\\\":\\\".svg\\\",\\\"vote_average\\\":5.384,\\\"vote_count\\\":2,\\\"width\\\":295},{\\\"aspect_ratio\\\":3.03951367781155,\\\"file_path\\\":\\\"/tlVSws0RvvtPBwViUyOFAO0vcQS.png\\\",\\\"height\\\":329,\\\"id\\\":\\\"63306b352b8a430096598b3d\\\",\\\"file_type\\\":\\\".svg\\\",\\\"vote_average\\\":5.312,\\\"vote_count\\\":1,\\\"width\\\":1000}]}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.themoviedb.org",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "01f3e686-bdbc-468b-9097-f1054065d1cc",
+    "name": "tmdb-api Account Company API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}
