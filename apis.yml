@@ -305,6 +305,8 @@ apis:
   humanURL: https://developer.themoviedb.org
   baseURL: https://api.themoviedb.org/3
   tags:
+  - Persons
+  tags_raw:
   - Person
   properties:
   - type: OpenAPI
@@ -377,6 +379,8 @@ apis:
   humanURL: https://developer.themoviedb.org
   baseURL: https://api.themoviedb.org/3
   tags:
+  - TV
+  tags_raw:
   - Tv
   properties:
   - type: OpenAPI
