@@ -4,6 +4,18 @@ description: >-
   Welcome to version 3 of The Movie Database (TMDB) API. This is where you will find the definitive list of currently
   available methods for our movie, tv, actor and image API.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
