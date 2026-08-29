@@ -424,6 +424,9 @@ apis:
   - type: Authentication
     url: https://developer.themoviedb.org/docs/authentication-application
 common:
+  - type: CapabilityMap
+    url: capabilities/the-movie-database-capability-edges.yml
+    name: The Movie Database Business Capability Map
   - type: AgenticAccess
     url: agentic-access/the-movie-database-agentic-access.yml
   - type: DomainSecurity

@@ -1,0 +1,54 @@
+slug: the-movie-database
+provider: The Movie Database
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Media, Entertainment & Telecom Content
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 4
+edges:
+- tag: Certification
+  spec_file: the-movie-database-certification-api-openapi.yml
+  capability_id: BC-3780.10
+  capability_id_l1: BC-3780
+  capability_name: Content Classification & Rating Management
+  confidence: 0.8
+  evidence: GET /3/certification/movie/list  certification-movie-list  Movie Certifications; GET /3/certification/tv/list  certifications-tv-list  TV
+    Certifications
+  reason: The endpoints expose age/content certification systems for movies and TV across territories,
+    which is the content classification and rating domain. It is a read-only reference list rather than
+    a submission workflow, hence 0.8 rather than 0.95.
+- tag: Movie
+  spec_file: the-movie-database-movie-api-openapi.yml
+  capability_id: BC-3710.20
+  capability_id_l1: BC-3710
+  capability_name: Metadata Cataloguing
+  confidence: 0.8
+  evidence: GET /3/movie/{movie_id}/credits  movie-credits  Credits ; GET /3/movie/{movie_id}/alternative_titles
+  reason: Operations serve descriptive metadata about movie titles — details, alternative titles, credits,
+    images, external IDs — which is metadata cataloguing of media assets, not production or distribution.
+- tag: Tv
+  spec_file: the-movie-database-tv-api-openapi.yml
+  capability_id: BC-3710.20
+  capability_id_l1: BC-3710
+  capability_name: Metadata Cataloguing
+  confidence: 0.8
+  evidence: GET /3/tv/{series_id}/content_ratings  tv-series-content-ratings ; GET /3/tv/{series_id}/aggregate_credits
+  reason: Operations expose descriptive metadata for TV series — details, alternative titles, credits,
+    content ratings — i.e. cataloguing of content metadata rather than scheduling or delivery.
+- tag: Person
+  spec_file: the-movie-database-person-api-openapi.yml
+  capability_id: BC-3710.20
+  capability_id_l1: BC-3710
+  capability_name: Metadata Cataloguing
+  confidence: 0.7
+  evidence: GET /3/person/{person_id}/movie_credits  person-movie-credits  Movie Credits
+  reason: Serves biographical and credit metadata for cast and crew records in the content database —
+    descriptive cataloguing. Not talent management, since there is no casting, contracting or residuals
+    surface.
