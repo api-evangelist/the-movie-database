@@ -391,7 +391,7 @@ apis:
   humanURL: https://developer.themoviedb.org
   baseURL: https://api.themoviedb.org/3
   tags:
-  - Tv
+  - TV
   tags_raw:
   - Tv
   properties:
